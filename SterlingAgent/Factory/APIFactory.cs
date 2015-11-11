@@ -1,4 +1,5 @@
 ﻿using APIAgent.Interface;
+using Common;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -9,8 +10,9 @@ namespace APIAgent.Factory
 {
     public class APIFactory
     {
-        private static readonly string APINameSpace = ConfigurationManager.AppSettings["APINameSpace"];
-        private static readonly string APIAssemblyName = ConfigurationManager.AppSettings["APIAssemblyName"];
+
+        private static readonly string APINameSpace = Config.GetAppSetting("APIAgent", "APINameSpace");
+        private static readonly string APIAssemblyName = Config.GetAppSetting("APIAgent", "APIAssemblyName");
         private static readonly Assembly Assembly;
 
         static APIFactory()
