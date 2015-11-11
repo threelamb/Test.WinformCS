@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Comunication
+namespace APIAgent.Interface
 {
-    public class Class1
+    public class IOrder
     {
+
     }
 }
