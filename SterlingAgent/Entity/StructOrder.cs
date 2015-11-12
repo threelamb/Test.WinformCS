@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace APIAgent.Entity
+{
+    public class StructOrder
+    {
+        public short bMoc;
+        public short bMoo;
+        public short bOpportunisticTrade;
+        public short bPossDupe;
+        public short bPriceCheck;
+        public short bPriceQtyOverride;
+        public string bstrAccount;
+        public string bstrAccountType;
+        public string bstrBatchId;
+        public string bstrClOrderId;
+        public string bstrCommName;
+        public string bstrCoverUncover;
+        public string bstrCurrency;
+        public string bstrDestination;
+        public string bstrEndTime;
+        public string bstrExecBroker;
+        public string bstrExecInst;
+        public string bstrFutSettDate;
+        public string bstrInstrument;
+        public string bstrListingExchange;
+        public string bstrLocateBroker;
+        public string bstrLocateTime;
+        public string bstrMaturity;
+        public string bstrOpenClose;
+        public string bstrPairId;
+        public string bstrPutCall;
+        public string bstrSettCurrency;
+        public string bstrSide;
+        public string bstrSorPreference;
+        public string bstrStartTime;
+        public string bstrStrategy;
+        public string bstrStrPriceType;
+        public string bstrSymbol;
+        public string bstrTif;
+        public string bstrUnderlying;
+        public string bstrUser;
+        public short bTakeLiquidity;
+        public double fAvgPriceLmt;
+        public double fCashComponent;
+        public double fDiscretion;
+        public double fExecPriceLmt;
+        public double fLmtPrice;
+        public double fMaxHighPctDeviation;
+        public double fMaxLowPctDeviation;
+        public double fPctPerSlice;
+        public double fPegDiff;
+        public double fPremium;
+        public double fRatio;
+        public double fReactPrice;
+        public double fStpPrice;
+        public double fStrikePrice;
+        public double fTargetPctVolume;
+        public double fTargetPrice;
+        public double fTilt;
+        public double fTrailAmt;
+        public double fTrailInc;
+        public int nAuction;
+        public int nDisplay;
+        public int nDuration;
+        public int nExecAggression;
+        public int nLocateQty;
+        public int nLvsQty;
+        public int nMarketStructure;
+        public int nMaxPctVolume;
+        public int nMinPctVolume;
+        public int nMinQuantity;
+        public int nOrderCompletion;
+        public int nParentRecordId;
+        public int nPingInterval;
+        public int nPriceTolerance;
+        public int nPriceType;
+        public int nQtyTolerancePct;
+        public int nQtyToleranceSize;
+        public int nQuantity;
+        public int nRefreshInterval;
+        public int nRefreshQty;
+        public int nSizeLow;
+        public int nSizeMax;
+    }
+}

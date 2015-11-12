@@ -57,6 +57,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a7330d75-dfdf-4c3c-9b91-b26472df21cc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SterlingAgent\APIAgent.csproj">
       <Project>{b8e686dd-1257-4ef6-96cc-7392bf789e13}</Project>
       <Name>APIAgent</Name>
