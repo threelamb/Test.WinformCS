@@ -4,6 +4,7 @@ using Common.Concrete.Mapper;
 using Common.Interface.Mapper;
 using SterlingLib;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -21,7 +22,7 @@ namespace APIAgent.Concrete.Sterling
 
             stiOrder = typeMapper.Map<Order, STIOrderClass>(this);
             rs = stiOrder.SubmitOrder();
-            
+
             return rs;
         }
 
@@ -30,11 +31,16 @@ namespace APIAgent.Concrete.Sterling
             int rs;
 
             stiOrder = typeMapper.Map<Order, STIOrderClass>(this);
-            structSTIOrder sctSTIOrder = typeMapper.Map<OrderModel, structSTIOrder>(orderM);
+            var sctSTIOrder = typeMapper.Map<OrderModel, structSTIOrder>(orderM);
             rs = stiOrder.SubmitOrderStruct(ref sctSTIOrder);
             orderM = typeMapper.Map<structSTIOrder, OrderModel>(sctSTIOrder);
 
             return rs;
+        }
+
+        public override int CancelOrder()
+        {
+            return 1;
         }
     }
 }

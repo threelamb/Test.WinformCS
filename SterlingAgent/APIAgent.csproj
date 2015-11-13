@@ -40,8 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\Sterling\Account.cs" />
+    <Compile Include="Concrete\Sterling\Event.cs" />
     <Compile Include="Entity\StructOrder.cs" />
     <Compile Include="Factory\APIFactory.cs" />
+    <Compile Include="Interface\IAccount.cs" />
+    <Compile Include="Interface\IEvent.cs" />
     <Compile Include="Interface\IOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Concrete\Sterling\Order.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SterlingLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,16 @@ namespace Itrader
         public Form1()
         {
             InitializeComponent();
+            Test();
+        }
+
+        public void Test()
+        {
+        }
+
+        public void OnSTIDropHandle(ref structSTIDrop structDrop)
+        {
+
         }
     }
 }

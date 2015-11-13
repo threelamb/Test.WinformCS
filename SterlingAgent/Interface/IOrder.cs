@@ -13,8 +13,10 @@ namespace APIAgent.Interface
         public string Side { get; set; }
         public string Quantity { get; set; }
         public string Destination { get; set; }
+        public int PriceType { get; set; }
         public string Tif { get; set; }
         public abstract int SubmitOrder();
         public abstract int SubmitOrder(ref OrderModel structOrder);
+        public abstract int CancelOrder();
     }
 }

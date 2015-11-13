@@ -22,8 +22,14 @@ namespace APIAgent.Factory
 
         public static IOrder CreateOrder()
         {
-            var result = (IOrder)assembly.CreateInstance(nameSpace + "Order");
-            return result;
+            var rs = (IOrder)assembly.CreateInstance(nameSpace + "Order");
+            return rs;
+        }
+
+        public static IAccount CreateAccount()
+        {
+            var rs = (IAccount)assembly.CreateInstance(nameSpace + "Account");
+            return rs;
         }
     }
 }

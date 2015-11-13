@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using APIAgent.Factory;
-using APIAgent.Concrete;
 
 namespace UnitTestForAPIAgent
 {
@@ -16,6 +15,13 @@ namespace UnitTestForAPIAgent
             order.Symbol = "SIRI";
             order.Quantity = "1";
             var rs = order.SubmitOrder();
+        }
+
+        [TestMethod]
+        public void Test_CreateAccount()
+        {
+            var account = APIFactory.CreateAccount();
+            var rs = account.GetAccount();
         }
     }
 }
