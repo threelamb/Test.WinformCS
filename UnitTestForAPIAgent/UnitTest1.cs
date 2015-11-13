@@ -12,6 +12,10 @@ namespace UnitTestForAPIAgent
         public void Test_CreateOrder()
         {
             var order = APIFactory.CreateOrder();
+            order.Account = "test";
+            order.Symbol = "SIRI";
+            order.Quantity = "1";
+            var rs = order.SubmitOrder();
         }
     }
 }

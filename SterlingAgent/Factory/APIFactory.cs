@@ -11,19 +11,18 @@ namespace APIAgent.Factory
     public class APIFactory
     {
 
-        private static readonly string APINameSpace = Config.GetAppSetting("APIAgent", "APINameSpace");
-        private static readonly string APIAssemblyName = Config.GetAppSetting("APIAgent", "APIAssemblyName");
-        private static readonly Assembly Assembly;
-
+        private static readonly string API = Config.GetAppSetting("APIAgent", "API");
+        private static readonly string nameSpace;
+        private static Assembly assembly;
         static APIFactory()
         {
-            Assembly = Assembly.Load(APIAssemblyName);
+            assembly = Assembly.GetExecutingAssembly();
+            nameSpace = string.Format("APIAgent.Concrete.{0}.", API);
         }
 
         public static IOrder CreateOrder()
         {
-            var result = (IOrder)Assembly.CreateInstance(APINameSpace + "Order");
-
+            var result = (IOrder)assembly.CreateInstance(nameSpace + "Order");
             return result;
         }
     }

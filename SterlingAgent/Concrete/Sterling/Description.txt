@@ -1,0 +1,1 @@
+﻿All sterling classes can work correctly only when Sterling trader pro has been logged in.

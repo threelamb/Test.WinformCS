@@ -9,10 +9,10 @@ namespace Common.Concrete.Mapper
     public class TypeMapper : ITypeMapper
     {
         public Target Map<Source, Target>(Source source)
-            where Source : class, new()
-            where Target : class, new()
+            where Source : new()
+            where Target : new()
         {
-            if (source == null) return null;
+            if (source == null) return new Target();
             var mapper = ObjectMapperManager.DefaultInstance.GetMapper<Source, Target>();
             return mapper.Map(source);
         }

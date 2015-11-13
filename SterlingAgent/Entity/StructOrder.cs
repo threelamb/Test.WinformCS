@@ -4,7 +4,7 @@ using System.Text;
 
 namespace APIAgent.Entity
 {
-    public class StructOrder
+    public class OrderModel
     {
         public short bMoc;
         public short bMoo;

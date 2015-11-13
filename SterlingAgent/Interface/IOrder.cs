@@ -6,7 +6,7 @@ using System.Text;
 
 namespace APIAgent.Interface
 {
-    public abstract class IOrder : ITypeBase
+    public abstract class IOrder
     {
         public string Symbol { get; set; }
         public string Account { get; set; }
@@ -15,6 +15,6 @@ namespace APIAgent.Interface
         public string Destination { get; set; }
         public string Tif { get; set; }
         public abstract int SubmitOrder();
-        public abstract int SubmitOrder(ref StructOrder structOrder);
+        public abstract int SubmitOrder(ref OrderModel structOrder);
     }
 }

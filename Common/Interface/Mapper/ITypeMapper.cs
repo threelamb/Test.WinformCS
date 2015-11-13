@@ -7,7 +7,7 @@ namespace Common.Interface.Mapper
     public interface ITypeMapper
     {
         Target Map<Source, Target>(Source source)
-            where Source : class, new()
-            where Target : class, new();
+            where Source : new()
+            where Target : new();
     }
 }
