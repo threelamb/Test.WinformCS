@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A7330D75-DFDF-4C3C-9B91-B26472DF21CC}</ProjectGuid>
+    <ProjectGuid>{1D6495F3-A715-4BDE-9195-A37625D2012E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common</RootNamespace>
-    <AssemblyName>Common</AssemblyName>
+    <RootNamespace>LoginAPI</RootNamespace>
+    <AssemblyName>LoginAPI</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -31,32 +31,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EmitMapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\International\API\API.GlobalAPI\Code\APICode V4.x\GlobalAPISolution\packages\EmitMapper.1.0.0\lib\EmitMapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
-    <Compile Include="Extenstion\TypeExtension.cs" />
-    <Compile Include="Interface\Mapper\ITypeMapper.cs" />
-    <Compile Include="Concrete\Mapper\TypeMapper.cs" />
-    <Compile Include="MyMD5.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Encryption\EncryptionContext.cs" />
+    <Compile Include="Encryption\EncryptionResult.cs" />
+    <Compile Include="Encryption\IEncryption.cs" />
+    <Compile Include="Encryption\MD5Encryption.cs" />
+    <Compile Include="HttpPost\HttpPost.cs" />
+    <Compile Include="ILoginAPI.cs" />
+    <Compile Include="LoginAPI.cs" />
+    <Compile Include="Entity\LogInRequest.cs" />
+    <Compile Include="Entity\LogInResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="DLL\Mapper\EmitMapper.dll" />
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a7330d75-dfdf-4c3c-9b91-b26472df21cc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LoginConfig.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -8,6 +8,15 @@ namespace UnitTestForAPIAgent
     public class UnitTest1
     {
         [TestMethod]
+        public void Test_Login()
+        {
+            var req = new LoginAPI.Entity.LogInRequest();
+            req.UserID = "catsky";
+            req.Password = "password1234";
+            var res = new LoginAPI.LoginAPI().Login(req);
+        }
+
+        [TestMethod]
         public void Test_CreateOrder()
         {
             var order = APIFactory.CreateOrder();
