@@ -45,6 +45,7 @@
     <Compile Include="Encryption\EncryptionResult.cs" />
     <Compile Include="Encryption\IEncryption.cs" />
     <Compile Include="Encryption\MD5Encryption.cs" />
+    <Compile Include="Entity\JsonRequest.cs" />
     <Compile Include="HttpPost\HttpPost.cs" />
     <Compile Include="ILoginAPI.cs" />
     <Compile Include="LoginAPI.cs" />

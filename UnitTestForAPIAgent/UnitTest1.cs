@@ -12,7 +12,7 @@ namespace UnitTestForAPIAgent
         {
             var req = new LoginAPI.Entity.LogInRequest();
             req.UserID = "catsky";
-            req.Password = "password1234";
+            req.Password = "password";
             var res = new LoginAPI.LoginAPI().Login(req);
         }
 

@@ -15,7 +15,10 @@ namespace LoginAPI
             res = null;
             if (req != null && !req.UserID.IsNullOrEmpity())
             {
-                string postStr = new Encryption.EncryptionContext().GetResult(req).B;
+                JsonRequest jsonReq = new JsonRequest(); 
+                jsonReq.user = req.UserID;
+                jsonReq.password = new Encryption.EncryptionContext().GetResult(req).B;
+                string postStr = jsonReq.ToJson();
                 string resStr = new HttpPost.HttpPost().Post(postStr);
             }
 

@@ -15,32 +15,64 @@ namespace LoginAPI.HttpPost
         {
             HttpWebRequest request;
             HttpWebResponse response;
-            
-            request = (HttpWebRequest)WebRequest.Create(Url);
-            request.Method = "POST";
-            request.ContentType = "text/xml";
-            request.Accept = "application/x-javascript";
-            request.ContentLength = str.Length;
-            StreamWriter writer = new StreamWriter(request.GetRequestStream(), Encoding.ASCII);
-            writer.Write(str); 
-            writer.Flush();
+
             try
             {
-                response = (HttpWebResponse)request.GetResponse();
+                byte[] dataArray = Encoding.UTF8.GetBytes(str);
+                request = (HttpWebRequest)WebRequest.Create(Url);
+                request.Method = Method.Post;
+                request.ContentType = ContentType.Json;
+                request.Accept = Accept.All;
+                request.KeepAlive = false;
+                request.ContentLength = dataArray.Length;
+                //StreamWriter writer = new StreamWriter(request.GetRequestStream(), Encoding.UTF8);
+                var writer = request.GetRequestStream();
+                writer.Write(dataArray, 0, dataArray.Length);
+                writer.Flush();
+                writer.Close();
+
+                try
+                {
+                    response = (HttpWebResponse)request.GetResponse();
+                }
+                catch (Exception e1)
+                {
+                    throw;
+                }
+                string encoding = response.ContentEncoding;
+                if (encoding == null || encoding.Length < 1)
+                {
+                    encoding = "UTF-8"; //默认编码  
+                }
+                StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encoding));
+                string retString = reader.ReadToEnd();
+                reader.Close();
+
+                if (response != null) response.Close();
+                if (request != null) request.Abort();
+
+                return retString;
             }
-            catch (Exception ex)
+            catch (Exception e2)
             {
                 throw;
             }
-
-            string encoding = response.ContentEncoding;
-            if (encoding == null || encoding.Length < 1)
-            {
-                encoding = "UTF-8"; //默认编码  
-            }
-            StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encoding));
-            string retString = reader.ReadToEnd();
-            return retString;
         }
+    }
+
+    class ContentType
+    {
+        internal const string Json = "application/json";
+    }
+
+    class Accept
+    {
+        internal const string All = "*/*";
+    }
+
+    class Method
+    {
+        internal const string Get = "GET";
+        internal const string Post = "POST";
     }
 }
