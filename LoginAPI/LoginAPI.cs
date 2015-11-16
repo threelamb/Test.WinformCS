@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using Common.Extenstion;
-using LoginAPI.Entity;
+using APILogin.Entity;
 
-namespace LoginAPI
+namespace APILogin
 {
     public class LoginAPI : ILoginAPI
     {
@@ -17,7 +17,7 @@ namespace LoginAPI
             {
                 JsonRequest jsonReq = new JsonRequest(); 
                 jsonReq.user = req.UserID;
-                jsonReq.password = new Encryption.EncryptionContext().GetResult(req).B;
+                jsonReq.password = new Encryption.EncryptionContext().GetResult(req).RemoteVerifyStr;
                 string postStr = jsonReq.ToJson();
                 string resStr = new HttpPost.HttpPost().Post(postStr);
             }

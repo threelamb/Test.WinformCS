@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{535CF7FB-A565-4683-ADF3-03B05FE4BCBE}</ProjectGuid>
+    <ProjectGuid>{DFE2D5E8-F25F-4344-A2F2-260242FF08D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestForAPIAgent</RootNamespace>
-    <AssemblyName>UnitTestForAPIAgent</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <RootNamespace>UnitTestForResource</RootNamespace>
+    <AssemblyName>UnitTestForResource</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -16,7 +16,6 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,17 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{a7330d75-dfdf-4c3c-9b91-b26472df21cc}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LoginAPI\APILogin.csproj">
-      <Project>{1d6495f3-a715-4bde-9195-a37625d2012e}</Project>
-      <Name>APILogin</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SterlingAgent\APIAgent.csproj">
-      <Project>{b8e686dd-1257-4ef6-96cc-7392bf789e13}</Project>
-      <Name>APIAgent</Name>
+    <ProjectReference Include="..\Resource\Resource.csproj">
+      <Project>{e63b8e32-de1d-491c-93a6-34884c77426b}</Project>
+      <Name>Resource</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

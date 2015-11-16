@@ -5,7 +5,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace LoginAPI.HttpPost
+namespace APILogin.HttpPost
 {
     class HttpPost
     {

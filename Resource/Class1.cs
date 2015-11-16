@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace APILogin.Entity
+namespace Resource
 {
-    public class LogInResponse
+    public class Class1
     {
-        bool success;
-        Data data;
     }
 }

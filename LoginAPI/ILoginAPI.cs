@@ -1,9 +1,9 @@
-﻿using LoginAPI.Entity;
+﻿using APILogin.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LoginAPI
+namespace APILogin
 {
     public interface ILoginAPI
     {

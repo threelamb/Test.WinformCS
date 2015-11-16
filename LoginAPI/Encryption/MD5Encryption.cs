@@ -1,10 +1,10 @@
 ﻿using Common;
-using LoginAPI.Entity;
+using APILogin.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LoginAPI.Encryption
+namespace APILogin.Encryption
 {
     internal class MD5Encryption : IEncryption
     {
@@ -24,9 +24,9 @@ namespace LoginAPI.Encryption
             var UserID = req.UserID;
             var Password = req.Password;
             res = new EncryptionResult();
-            res.A = Md5(Password + SALT1);
-            res.B = Md5(Md5(res.A + UserID) + SALT2);
-            res.C = Md5(res.B + SALT3);
+            var A = Md5(Password + SALT1);
+            res.RemoteVerifyStr = Md5(Md5(A + UserID) + SALT2);
+            res.LocalVerifyStr = Md5(res.RemoteVerifyStr + SALT3);
 
             return res;
         }

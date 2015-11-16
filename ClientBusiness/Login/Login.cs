@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace APILogin.Entity
+namespace ClientBusiness.Login
 {
-    public class LogInResponse
+    class Login
     {
-        bool success;
-        Data data;
+
     }
 }

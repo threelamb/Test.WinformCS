@@ -1,11 +1,11 @@
 ﻿using Common;
-using LoginAPI.Entity;
+using APILogin.Entity;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace LoginAPI.Encryption
+namespace APILogin.Encryption
 {
     internal class EncryptionContext
     {

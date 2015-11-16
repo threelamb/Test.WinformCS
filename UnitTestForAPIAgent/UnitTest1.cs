@@ -10,10 +10,10 @@ namespace UnitTestForAPIAgent
         [TestMethod]
         public void Test_Login()
         {
-            var req = new LoginAPI.Entity.LogInRequest();
+            var req = new APILogin.Entity.LogInRequest();
             req.UserID = "catsky";
             req.Password = "password";
-            var res = new LoginAPI.LoginAPI().Login(req);
+            var res = new APILogin.LoginAPI().Login(req);
         }
 
         [TestMethod]
