@@ -95,5 +95,23 @@ namespace Resource {
                 return ResourceManager.GetString("lbl_password", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 需要用户名.
+        /// </summary>
+        public static string mbox_needName {
+            get {
+                return ResourceManager.GetString("mbox_needName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 需要密码.
+        /// </summary>
+        public static string mbox_needPassword {
+            get {
+                return ResourceManager.GetString("mbox_needPassword", resourceCulture);
+            }
+        }
     }
 }

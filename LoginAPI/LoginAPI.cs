@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Common.Extenstion;
-using APILogin.Entity;
+using Common;
+using LoginAPI.Entity;
 
-namespace APILogin
+namespace LoginAPI
 {
     public class LoginAPI : ILoginAPI
     {
@@ -12,14 +12,20 @@ namespace APILogin
         {
             LogInResponse res;
 
-            res = null;
+            res = new LogInResponse();
             if (req != null && !req.UserID.IsNullOrEmpity())
             {
-                JsonRequest jsonReq = new JsonRequest(); 
+                JsonRequest jsonReq = new JsonRequest();
                 jsonReq.user = req.UserID;
                 jsonReq.password = new Encryption.EncryptionContext().GetResult(req).RemoteVerifyStr;
                 string postStr = jsonReq.ToJson();
                 string resStr = new HttpPost.HttpPost().Post(postStr);
+                var jsonResp = resStr.ToJsonObj<JsonResponse>();
+                if (jsonResp != null && jsonResp.data != null)
+                {
+                    res.Success = true;
+                    res.Data = jsonResp.data;
+                }
             }
 
             return res;

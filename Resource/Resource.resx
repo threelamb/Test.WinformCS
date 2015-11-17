@@ -129,4 +129,10 @@
   <data name="lbl_password" xml:space="preserve">
     <value>密码:</value>
   </data>
+  <data name="mbox_needName" xml:space="preserve">
+    <value>需要用户名</value>
+  </data>
+  <data name="mbox_needPassword" xml:space="preserve">
+    <value>需要密码</value>
+  </data>
 </root>

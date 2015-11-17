@@ -32,10 +32,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_name = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.Label();
-            this.btn_login = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.tbx_name = new System.Windows.Forms.TextBox();
             this.tbx_password = new System.Windows.Forms.TextBox();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +82,7 @@
             this.lbl_name.AutoSize = true;
             this.lbl_name.Location = new System.Drawing.Point(3, 204);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(41, 12);
+            this.lbl_name.Size = new System.Drawing.Size(0, 12);
             this.lbl_name.TabIndex = 1;
             // 
             // lbl_password
@@ -91,28 +91,8 @@
             this.lbl_password.AutoSize = true;
             this.lbl_password.Location = new System.Drawing.Point(3, 234);
             this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(41, 12);
+            this.lbl_password.Size = new System.Drawing.Size(0, 12);
             this.lbl_password.TabIndex = 1;
-            // 
-            // btn_login
-            // 
-            this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_login.Location = new System.Drawing.Point(276, 263);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(70, 23);
-            this.btn_login.TabIndex = 2;
-            this.btn_login.UseVisualStyleBackColor = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_cancel.Location = new System.Drawing.Point(366, 263);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(70, 23);
-            this.btn_cancel.TabIndex = 2;
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // tbx_name
             // 
@@ -132,6 +112,26 @@
             this.tbx_password.Size = new System.Drawing.Size(343, 21);
             this.tbx_password.TabIndex = 3;
             // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_cancel.Location = new System.Drawing.Point(366, 263);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(70, 23);
+            this.btn_cancel.TabIndex = 2;
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_login
+            // 
+            this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_login.Location = new System.Drawing.Point(276, 263);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(70, 23);
+            this.btn_login.TabIndex = 2;
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -146,6 +146,7 @@
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion

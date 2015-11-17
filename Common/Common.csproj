@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="Extenstion\StrExtension.cs" />
     <Compile Include="Extenstion\TypeExtension.cs" />
     <Compile Include="Interface\Mapper\ITypeMapper.cs" />
     <Compile Include="Concrete\Mapper\TypeMapper.cs" />

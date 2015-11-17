@@ -1,9 +1,9 @@
-﻿using APILogin.Entity;
+﻿using LoginAPI.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace APILogin.Encryption
+namespace LoginAPI.Encryption
 {
     internal interface IEncryption
     {

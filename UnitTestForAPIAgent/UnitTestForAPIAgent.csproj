@@ -62,9 +62,9 @@
       <Project>{a7330d75-dfdf-4c3c-9b91-b26472df21cc}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LoginAPI\APILogin.csproj">
+    <ProjectReference Include="..\LoginAPI\LoginAPI.csproj">
       <Project>{1d6495f3-a715-4bde-9195-a37625d2012e}</Project>
-      <Name>APILogin</Name>
+      <Name>LoginAPI</Name>
     </ProjectReference>
     <ProjectReference Include="..\SterlingAgent\APIAgent.csproj">
       <Project>{b8e686dd-1257-4ef6-96cc-7392bf789e13}</Project>

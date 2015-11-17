@@ -86,6 +86,10 @@
       <Project>{2fbe2d82-d3e2-480c-85f1-80aa4598b776}</Project>
       <Name>ClientBusiness</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a7330d75-dfdf-4c3c-9b91-b26472df21cc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Resource\Resource.csproj">
       <Project>{e63b8e32-de1d-491c-93a6-34884c77426b}</Project>
       <Name>Resource</Name>

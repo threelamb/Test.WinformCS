@@ -7,8 +7,8 @@
     <ProjectGuid>{1D6495F3-A715-4BDE-9195-A37625D2012E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>APILogin</RootNamespace>
-    <AssemblyName>APILogin</AssemblyName>
+    <RootNamespace>LoginAPI</RootNamespace>
+    <AssemblyName>LoginAPI</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -40,12 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data.cs" />
+    <Compile Include="Entity\Data.cs" />
     <Compile Include="Encryption\EncryptionContext.cs" />
     <Compile Include="Encryption\EncryptionResult.cs" />
     <Compile Include="Encryption\IEncryption.cs" />
     <Compile Include="Encryption\MD5Encryption.cs" />
     <Compile Include="Entity\JsonRequest.cs" />
+    <Compile Include="Entity\JsonResponse.cs" />
     <Compile Include="HttpPost\HttpPost.cs" />
     <Compile Include="ILoginAPI.cs" />
     <Compile Include="LoginAPI.cs" />

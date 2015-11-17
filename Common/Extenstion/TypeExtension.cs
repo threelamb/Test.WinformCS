@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Script.Serialization;
 
-namespace Common.Extenstion
+namespace Common
 {
     public static class TypeExtension
     {
