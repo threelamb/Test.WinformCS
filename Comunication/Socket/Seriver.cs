@@ -174,7 +174,38 @@ namespace Comunication.MySocket
 
         private byte[] Check(byte[] tempMsg)
         {
-            throw new NotImplementedException();
+            ushort sum = checksum(tempMsg, tempMsg.Length);
+            byte[] res = BitConverter.GetBytes(sum);
+            return res;
+        }
+
+        private ushort checksum(byte[] data, int len)
+        {
+            int sum = 0;
+
+            for (int i = 0; i < len; i += 2)
+            {
+                if (i == 10)
+                {
+                    continue;
+                }
+                sum += BitConverter.ToUInt16(MakInt16Data(BitConverter.ToUInt16(data, i)), 0);
+            }
+            if (sum > 0xffff)
+            {
+                int u = sum >> 16;
+                sum = (ushort)sum;
+                sum = sum + u;
+            }
+
+            return (ushort)~sum;
+        }
+
+        private byte[] MakInt16Data(ushort i)
+        {
+            byte[] b = BitConverter.GetBytes(i);
+            Array.Reverse(b);
+            return b;
         }
     }
 }
