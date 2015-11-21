@@ -42,7 +42,11 @@
   <ItemGroup>
     <Compile Include="Concrete\Sterling\Account.cs" />
     <Compile Include="Concrete\Sterling\Event.cs" />
+    <Compile Include="Entity\Destination.cs" />
+    <Compile Include="Entity\PriceTypes.cs" />
+    <Compile Include="Entity\Side.cs" />
     <Compile Include="Entity\StructOrder.cs" />
+    <Compile Include="Entity\Tifs.cs" />
     <Compile Include="Factory\APIFactory.cs" />
     <Compile Include="Interface\IAccount.cs" />
     <Compile Include="Interface\IEvent.cs" />

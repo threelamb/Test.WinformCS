@@ -1,6 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using APIAgent.Factory;
+using APIAgent.Entity;
+using SterlingLib;
+using System.Collections;
 
 namespace UnitTestForAPIAgent
 {
@@ -20,9 +23,15 @@ namespace UnitTestForAPIAgent
         public void Test_CreateOrder()
         {
             var order = APIFactory.CreateOrder();
-            order.Account = "test";
+            order.Account = "IF030WZPA";
             order.Symbol = "SIRI";
             order.Quantity = "1";
+            order.Side = Side.Sell;
+            order.PriceType = APIAgent.Entity.PriceTypes.ptSTIMkt;
+            order.Tif = Tifs.DAY;
+            order.Destination = Destination.EDGA;
+            order.ClOrderID = order.MakeClOrderID();
+
             var rs = order.SubmitOrder();
         }
 
