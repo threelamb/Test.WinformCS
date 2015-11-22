@@ -31,6 +31,7 @@ namespace TestSterlingAPI.Component
 
             this.cbx_Tif.DataSource = new Tifs().GetKeyValue<Tifs>();
             this.cbx_PriceType.DataSource = new PriceTypes().GetEnumKeyValue<PriceTypes>();
+            this.cbx_PriceType.SelectedIndex = 1;
             this.cbx_Destination.DataSource = APIFactory.CreateOrder().GetDestinationList();
         }
 
