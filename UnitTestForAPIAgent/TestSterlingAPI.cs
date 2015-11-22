@@ -42,14 +42,13 @@ namespace UnitTestForAPIAgent
         {
             SterlingLib.STIApp stiapp = new SterlingLib.STIApp();
 
-            Array a = System.Array.CreateInstance(typeof(string), 10);
+            Array res = System.Array.CreateInstance(typeof(string), 0);
             try
             {
-                stiapp.GetDestinationList(ref a);
+                stiapp.GetDestinationList(ref res);
             }
             catch (Exception ex)
             {
-
                 throw;
             }
         }

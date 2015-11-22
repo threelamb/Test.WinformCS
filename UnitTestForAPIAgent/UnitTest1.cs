@@ -30,7 +30,7 @@ namespace UnitTestForAPIAgent
             order.PriceType = APIAgent.Entity.PriceTypes.ptSTIMkt;
             order.Tif = Tifs.DAY;
             order.Destination = Destination.EDGA;
-            order.ClOrderID = order.MakeClOrderID();
+            order.ClOrderID = order.MakeClOrderID(order.Account);
 
             var rs = order.SubmitOrder();
         }

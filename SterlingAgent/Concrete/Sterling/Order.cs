@@ -6,6 +6,7 @@ using SterlingLib;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace APIAgent.Concrete.Sterling
@@ -13,7 +14,8 @@ namespace APIAgent.Concrete.Sterling
     public class Order : IOrder
     {
         private STIOrder stiOrder;
-        private STIQuote stiQuote = new SterlingLib.STIQuote();
+        private STIQuote stiQuote = new STIQuote();
+        private STIApp stiapp = new STIApp();
         ITypeMapper typeMapper = new TypeMapper();
 
         public override int SubmitOrder()
@@ -53,7 +55,23 @@ namespace APIAgent.Concrete.Sterling
 
             return res;
         }
+
+        public override Array GetDestinationList()
+        {
+            Array res = System.Array.CreateInstance(typeof(string), 0);
+            try
+            {
+                stiapp.GetDestinationList(ref res);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            return res;
+        }
     }
+
     public class SYSTEMTIME
     {
         public ushort wYear;
