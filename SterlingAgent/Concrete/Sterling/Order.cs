@@ -49,9 +49,8 @@ namespace APIAgent.Concrete.Sterling
         {
             string res;
 
-            SYSTEMTIME st = new SYSTEMTIME();
-            LibWrap.GetSystemTime(st);
-            res = account + st.wYear + st.wMonth + st.wDay + st.wHour + st.wMinute + st.wSecond + st.wMilliseconds;
+            var st = DateTime.Now;
+            res = account + st.Year + st.Month + st.Day + st.Hour + st.Minute + st.Second + st.Millisecond;
 
             return res;
         }
@@ -70,23 +69,5 @@ namespace APIAgent.Concrete.Sterling
 
             return res;
         }
-    }
-
-    public class SYSTEMTIME
-    {
-        public ushort wYear;
-        public ushort wMonth;
-        public ushort wDayOfWeek;
-        public ushort wDay;
-        public ushort wHour;
-        public ushort wMinute;
-        public ushort wSecond;
-        public ushort wMilliseconds;
-    }
-
-    public class LibWrap
-    {
-        [DllImport("Kernel32.dll")]
-        public static extern void GetSystemTime([In, Out] SYSTEMTIME st);
     }
 }
