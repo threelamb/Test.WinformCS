@@ -113,5 +113,23 @@ namespace Resource {
                 return ResourceManager.GetString("mbox_needPassword", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Itrader交易控制台.
+        /// </summary>
+        public static string txt_itraderMain {
+            get {
+                return ResourceManager.GetString("txt_itraderMain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Itrader登录.
+        /// </summary>
+        public static string txt_login {
+            get {
+                return ResourceManager.GetString("txt_login", resourceCulture);
+            }
+        }
     }
 }

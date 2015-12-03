@@ -21,6 +21,7 @@ namespace Itrader
             this.btn_login.Text = Resource.Resource.btn_login;
             this.btn_cancel.Text = Resource.Resource.btn_cancel;
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = Resource.Resource.txt_login;
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -30,9 +31,12 @@ namespace Itrader
             var passwrod = this.tbx_password.Text;
             ILoginBusiness LoginBiz = new LoginBusiness();
 
-            if (LoginBiz.VerifyPara(ref mbox, name, passwrod))
+            //if (LoginBiz.VerifyPara(ref mbox, name, passwrod)
+            //    && LoginBiz.login(name, passwrod))
+            if (true)
             {
-                LoginBiz.login(name, passwrod);
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                this.Close();
             }
             else
             {

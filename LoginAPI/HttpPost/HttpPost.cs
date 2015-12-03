@@ -15,6 +15,7 @@ namespace LoginAPI.HttpPost
         {
             HttpWebRequest request;
             HttpWebResponse response;
+            string retString = string.Empty;
 
             try
             {
@@ -45,7 +46,7 @@ namespace LoginAPI.HttpPost
                     encoding = "UTF-8"; //默认编码  
                 }
                 StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encoding));
-                string retString = reader.ReadToEnd();
+                retString = reader.ReadToEnd();
                 reader.Close();
 
                 if (response != null) response.Close();

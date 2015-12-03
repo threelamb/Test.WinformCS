@@ -7,6 +7,6 @@ namespace LoginAPI.Entity
 {
     class JsonResponse
     {
-        internal Data data;
+        public Data data;
     }
 }

@@ -10,6 +10,6 @@ namespace LoginAPI.Entity
         /// <summary>
         /// 有效期mm
         /// </summary>
-        double expire;
+        public double expire;
     }
 }

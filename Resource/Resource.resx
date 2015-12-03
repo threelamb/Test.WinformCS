@@ -135,4 +135,10 @@
   <data name="mbox_needPassword" xml:space="preserve">
     <value>需要密码</value>
   </data>
+  <data name="txt_itraderMain" xml:space="preserve">
+    <value>Itrader交易控制台</value>
+  </data>
+  <data name="txt_login" xml:space="preserve">
+    <value>Itrader登录</value>
+  </data>
 </root>
