@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Itrader
+namespace Client
 {
     public partial class ItraderMain : Form
     {
@@ -24,11 +24,6 @@ namespace Itrader
             {
                 this.Close();
             }
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

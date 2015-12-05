@@ -1,4 +1,4 @@
-﻿namespace Itrader
+﻿namespace Controls
 {
     partial class Login
     {

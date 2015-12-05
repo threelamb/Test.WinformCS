@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Client;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Itrader
+namespace Client
 {
     static class Program
     {

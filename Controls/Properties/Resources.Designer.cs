@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Itrader.Properties {
+namespace Controls.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Itrader.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Itrader.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Controls.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -153,16 +153,6 @@ namespace Itrader.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Icon1 {
-            get {
-                object obj = ResourceManager.GetObject("Icon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Magic_wand_24px_1185779_easyicon_net {
             get {
                 object obj = ResourceManager.GetObject("Magic_wand_24px_1185779_easyicon.net", resourceCulture);
@@ -206,16 +196,6 @@ namespace Itrader.Properties {
         internal static System.Drawing.Bitmap start_here_24px_572110_easyicon_net {
             get {
                 object obj = ResourceManager.GetObject("start_here_24px_572110_easyicon.net", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap stock_view_details_24px_1078505_easyicon_net {
-            get {
-                object obj = ResourceManager.GetObject("stock_view_details_24px_1078505_easyicon.net", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

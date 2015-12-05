@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace Itrader
+namespace Controls
 {
     public partial class Login : Form
     {

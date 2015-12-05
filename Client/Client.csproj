@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1991E530-3E00-42C8-A2AF-96060819F156}</ProjectGuid>
+    <ProjectGuid>{B6EC3A43-75C6-41D8-8ABC-78C45EEC0B0A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Itrader</RootNamespace>
-    <AssemblyName>Itrader</AssemblyName>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -34,6 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -63,18 +66,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -93,58 +96,14 @@
       <Project>{a7330d75-dfdf-4c3c-9b91-b26472df21cc}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Controls\Controls.csproj">
+      <Project>{1991e530-3e00-42c8-a2af-96060819f156}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Resource\Resource.csproj">
       <Project>{e63b8e32-de1d-491c-93a6-34884c77426b}</Project>
       <Name>Resource</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Badge_multiply_24px_1184721_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Badge_plus_24px_1184722_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Badge_tick_24px_1184723_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete_file_24px_1187316_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document_checkmark_24px_1111272_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document_edit_24px_1129273_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\document_minus_24px_1130398_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Document_new_icon_24px_1081653_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Exclamation_info_24px_529567_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Magic_wand_24px_1185779_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minus_24px_1088480_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Player_Pause_24px_523867_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\refresh_24px_1096680_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\start_here_24px_572110_easyicon.net.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stock_view_details_24px_1078505_easyicon.net.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

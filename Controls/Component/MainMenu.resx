@@ -112,58 +112,9 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Badge_multiply_24px_1184721_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Badge_multiply_24px_1184721_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Badge_plus_24px_1184722_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Badge_plus_24px_1184722_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Badge_tick_24px_1184723_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Badge_tick_24px_1184723_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_file_24px_1187316_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_file_24px_1187316_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document_checkmark_24px_1111272_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_checkmark_24px_1111272_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document_edit_24px_1129273_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_edit_24px_1129273_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="document_minus_24px_1130398_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_minus_24px_1130398_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Document_new_icon_24px_1081653_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Document_new_icon_24px_1081653_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Exclamation_info_24px_529567_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exclamation_info_24px_529567_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon1.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Magic_wand_24px_1185779_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Magic_wand_24px_1185779_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minus_24px_1088480_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minus_24px_1088480_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Player_Pause_24px_523867_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Player_Pause_24px_523867_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh_24px_1096680_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh_24px_1096680_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="start_here_24px_572110_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\start_here_24px_572110_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stock_view_details_24px_1078505_easyicon.net" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stock_view_details_24px_1078505_easyicon.net.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
