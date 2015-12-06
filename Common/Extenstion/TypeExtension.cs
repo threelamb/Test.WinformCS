@@ -133,6 +133,38 @@ namespace Common
             return res;
         }
 
+        public static List<T> LoadFile<T>(this string UserName, FileType ft)
+            where T : class
+        {
+            List<T> res;
+
+            res = new List<T>();
+            try
+            {
+                switch (ft)
+                {
+                    case FileType.Account:
+                        res = new AccountFile<T>().LoadFiles(UserName);
+                        break;
+                    case FileType.Strategy:
+                        break;
+                    case FileType.ActionLog:
+                        break;
+                    case FileType.ExceptionLog:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return res;
+
+        }
+
         public static string GetString(this object para)
         {
             return para == null ? string.Empty : para.ToString();

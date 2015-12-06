@@ -29,5 +29,10 @@ namespace ClientBusiness.Account
         {
             return fileName.ReadFile<Model.Account>(FileType.Account);
         }
+
+        public List<Model.Account> LoadAccounts(string UserName)
+        {
+            return UserName.LoadFile<Model.Account>(FileType.Account);
+        }
     }
 }

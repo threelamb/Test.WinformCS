@@ -47,6 +47,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.toolStrip2, 0, 1);
@@ -59,7 +60,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(196, 313);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(166, 186);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // toolStrip2
@@ -74,14 +75,13 @@
             this.tsb_disconnectAccount});
             this.toolStrip2.Location = new System.Drawing.Point(0, 30);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(196, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(166, 25);
             this.toolStrip2.TabIndex = 4;
             this.toolStrip2.Text = "toolStrip2";
             // 
             // tsb_addAccount
             // 
             this.tsb_addAccount.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsb_addAccount.Image = global::Controls.Properties.Resources.Badge_plus_24px_1184722_easyicon_net;
             this.tsb_addAccount.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_addAccount.Name = "tsb_addAccount";
             this.tsb_addAccount.Size = new System.Drawing.Size(23, 22);
@@ -92,7 +92,6 @@
             // tsb_deleteAccount
             // 
             this.tsb_deleteAccount.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsb_deleteAccount.Image = global::Controls.Properties.Resources.minus_24px_1088480_easyicon_net;
             this.tsb_deleteAccount.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_deleteAccount.Name = "tsb_deleteAccount";
             this.tsb_deleteAccount.Size = new System.Drawing.Size(23, 22);
@@ -103,52 +102,52 @@
             // tsb_accountDetail
             // 
             this.tsb_accountDetail.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsb_accountDetail.Image = global::Controls.Properties.Resources.Exclamation_info_24px_529567_easyicon_net;
             this.tsb_accountDetail.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_accountDetail.Name = "tsb_accountDetail";
             this.tsb_accountDetail.Size = new System.Drawing.Size(23, 22);
             this.tsb_accountDetail.Text = "toolStripButton3";
             this.tsb_accountDetail.ToolTipText = "查看账户";
+            this.tsb_accountDetail.Click += new System.EventHandler(this.tsb_accountDetail_Click);
             // 
             // tsb_enableAccount
             // 
             this.tsb_enableAccount.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsb_enableAccount.Image = global::Controls.Properties.Resources.Badge_tick_24px_1184723_easyicon_net;
             this.tsb_enableAccount.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_enableAccount.Name = "tsb_enableAccount";
             this.tsb_enableAccount.Size = new System.Drawing.Size(23, 22);
             this.tsb_enableAccount.Text = "toolStripButton4";
             this.tsb_enableAccount.ToolTipText = "启用账户";
+            this.tsb_enableAccount.Click += new System.EventHandler(this.tsb_enableAccount_Click);
             // 
             // tsb_disableAccount
             // 
             this.tsb_disableAccount.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsb_disableAccount.Image = global::Controls.Properties.Resources.Badge_multiply_24px_1184721_easyicon_net;
             this.tsb_disableAccount.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_disableAccount.Name = "tsb_disableAccount";
             this.tsb_disableAccount.Size = new System.Drawing.Size(23, 22);
             this.tsb_disableAccount.Text = "toolStripButton5";
             this.tsb_disableAccount.ToolTipText = "禁用账户";
+            this.tsb_disableAccount.Click += new System.EventHandler(this.tsb_disableAccount_Click);
             // 
             // tsb_connectAccount
             // 
             this.tsb_connectAccount.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsb_connectAccount.Image = global::Controls.Properties.Resources.start_here_24px_572110_easyicon_net;
             this.tsb_connectAccount.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_connectAccount.Name = "tsb_connectAccount";
             this.tsb_connectAccount.Size = new System.Drawing.Size(23, 22);
             this.tsb_connectAccount.Text = "toolStripButton3";
             this.tsb_connectAccount.ToolTipText = "连接";
+            this.tsb_connectAccount.Click += new System.EventHandler(this.tsb_connectAccount_Click);
             // 
             // tsb_disconnectAccount
             // 
             this.tsb_disconnectAccount.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsb_disconnectAccount.Image = global::Controls.Properties.Resources.Player_Pause_24px_523867_easyicon_net;
             this.tsb_disconnectAccount.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_disconnectAccount.Name = "tsb_disconnectAccount";
-            this.tsb_disconnectAccount.Size = new System.Drawing.Size(23, 22);
+            this.tsb_disconnectAccount.Size = new System.Drawing.Size(23, 4);
             this.tsb_disconnectAccount.Text = "toolStripButton4";
             this.tsb_disconnectAccount.ToolTipText = "断开";
+            this.tsb_disconnectAccount.Click += new System.EventHandler(this.tsb_disconnectAccount_Click);
             // 
             // label1
             // 
@@ -169,30 +168,21 @@
             this.panel1.Controls.Add(this.tlp_CountList);
             this.panel1.Location = new System.Drawing.Point(3, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(190, 247);
+            this.panel1.Size = new System.Drawing.Size(160, 120);
             this.panel1.TabIndex = 6;
             // 
             // tlp_CountList
             // 
             this.tlp_CountList.AutoScroll = true;
-            this.tlp_CountList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tlp_CountList.BackColor = System.Drawing.Color.White;
             this.tlp_CountList.ColumnCount = 1;
             this.tlp_CountList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlp_CountList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp_CountList.Location = new System.Drawing.Point(0, 0);
             this.tlp_CountList.Name = "tlp_CountList";
-            this.tlp_CountList.RowCount = 10;
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tlp_CountList.Size = new System.Drawing.Size(190, 247);
+            this.tlp_CountList.RowCount = 1;
+            this.tlp_CountList.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlp_CountList.Size = new System.Drawing.Size(160, 120);
             this.tlp_CountList.TabIndex = 0;
             // 
             // AccountList
@@ -202,7 +192,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AccountList";
-            this.Size = new System.Drawing.Size(196, 313);
+            this.Size = new System.Drawing.Size(166, 186);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);

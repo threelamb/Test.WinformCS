@@ -93,5 +93,31 @@ namespace Common.Concrete.FileOperate
         {
             return Encoding.UTF8;
         }
+
+        internal virtual List<T> LoadFiles(string UserNam)
+        {
+            List<T> res;
+
+            res = new List<T>();
+            try
+            {
+                var temp = string.Empty;
+                var localPath = GetLocalPath();
+                var folder = GetFolder();
+                var folderPath = Path.Combine(localPath, folder);
+                var fPaths = Directory.GetFiles(folderPath, "*" + GetFileExtension());
+                foreach (var fPath in fPaths)
+                {
+                    if (File.Exists(fPath))
+                        temp = File.ReadAllText(fPath);
+                    res.Add(DeseriaLize(temp));
+                }
+            }
+            catch (Exception e)
+            {
+            }
+
+            return res;
+        }
     }
 }

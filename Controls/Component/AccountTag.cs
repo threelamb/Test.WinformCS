@@ -10,10 +10,57 @@ using Model;
 
 namespace Controls.Component
 {
-    public partial class  AccountTag : UserControl
+    public partial class AccountTag : UserControl
     {
         private AccountList _accountList;
         private Account _account;
+
+        public AccountTag(AccountList accountList, Model.Account account)
+        {
+            InitializeComponent();
+            this._accountList = accountList;
+            this.Account = account;
+
+            RegisterEvent();
+        }
+
+        private void RegisterEvent()
+        {
+            this.tableLayoutPanel1.MouseDown += tableLayoutPanel1_Click;
+            this.lbl_Account.MouseDown += tableLayoutPanel1_Click;
+            this.lbl_Alias.MouseDown += tableLayoutPanel1_Click;
+            this.lbl_IP.MouseDown += tableLayoutPanel1_Click;
+            this.lbl_Status.MouseDown += tableLayoutPanel1_Click;
+
+            this.tableLayoutPanel1.MouseLeave += tableLayoutPanel1_MouseLeave;
+        }
+
+        void tableLayoutPanel1_MouseLeave(object sender, EventArgs e)
+        {
+            Point mp = this.PointToClient(Control.MousePosition);
+            if (mp.X < tableLayoutPanel1.Left
+                || mp.X > tableLayoutPanel1.Right
+                || mp.Y < tableLayoutPanel1.Top
+                || mp.Y > tableLayoutPanel1.Bottom
+                )
+            {
+                this.BackColor = Color.White;
+                if (this._accountList.Current == this)
+                {
+                    this.BackColor = Color.Red;
+                }
+                else if (this.Account.IsConnected)
+                {
+                    this.BackColor = Color.Green;
+                }
+            }
+        }
+
+        void tableLayoutPanel1_Click(object sender, EventArgs e)
+        {
+            this._accountList.Current = this;
+            this.BackColor = Color.Red;
+        }
 
         public Account Account
         {
@@ -25,15 +72,20 @@ namespace Controls.Component
                 this.lbl_Alias.Text = _account.Alias;
                 this.lbl_IP.Text = _account.IP;
                 this.lbl_Status.Text = _account.IsEnable ? "启用" : "禁用";
-                this.BackColor = _account.IsConnected ? Color.Red : Color.White;
+                if (this._accountList.Current == this)
+                {
+                    this.BackColor = Color.Red;
+                }
+                else if (_account.IsConnected)
+                {
+                    this.BackColor = Color.Green;
+                }
+                else
+                {
+                    this.BackColor = Color.White;
+                }
+                
             }
-        }
-
-        public AccountTag(AccountList accountList, Model.Account account)
-        {
-            InitializeComponent();
-            this._accountList = accountList;
-            this.Account = account;
         }
 
         public void Enable()
@@ -60,9 +112,21 @@ namespace Controls.Component
             _account.IsConnected = false;
         }
 
-        private void AccountTag_Click(object sender, EventArgs e)
+        internal void UnCheck()
         {
-            this._accountList.Current = this;
+            if (this.Account.IsConnected)
+            {
+                this.BackColor = Color.Green;
+            }
+            else
+            {
+                this.BackColor = Color.White;
+            }
+        }
+
+        internal void Check()
+        {
+            this.BackColor = Color.Red;
         }
     }
 }

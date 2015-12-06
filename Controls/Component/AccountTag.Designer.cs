@@ -40,8 +40,8 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.Controls.Add(this.lbl_Status, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl_IP, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lbl_Alias, 1, 0);
@@ -59,9 +59,9 @@
             // 
             this.lbl_Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Status.AutoSize = true;
-            this.lbl_Status.Location = new System.Drawing.Point(125, 58);
+            this.lbl_Status.Location = new System.Drawing.Point(149, 58);
             this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(116, 12);
+            this.lbl_Status.Size = new System.Drawing.Size(92, 12);
             this.lbl_Status.TabIndex = 3;
             this.lbl_Status.Text = "label1";
             // 
@@ -71,7 +71,7 @@
             this.lbl_IP.AutoSize = true;
             this.lbl_IP.Location = new System.Drawing.Point(3, 58);
             this.lbl_IP.Name = "lbl_IP";
-            this.lbl_IP.Size = new System.Drawing.Size(116, 12);
+            this.lbl_IP.Size = new System.Drawing.Size(140, 12);
             this.lbl_IP.TabIndex = 2;
             this.lbl_IP.Text = "label1";
             // 
@@ -79,9 +79,9 @@
             // 
             this.lbl_Alias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Alias.AutoSize = true;
-            this.lbl_Alias.Location = new System.Drawing.Point(125, 15);
+            this.lbl_Alias.Location = new System.Drawing.Point(149, 15);
             this.lbl_Alias.Name = "lbl_Alias";
-            this.lbl_Alias.Size = new System.Drawing.Size(116, 12);
+            this.lbl_Alias.Size = new System.Drawing.Size(92, 12);
             this.lbl_Alias.TabIndex = 1;
             this.lbl_Alias.Text = "label1";
             // 
@@ -91,7 +91,7 @@
             this.lbl_Account.AutoSize = true;
             this.lbl_Account.Location = new System.Drawing.Point(3, 15);
             this.lbl_Account.Name = "lbl_Account";
-            this.lbl_Account.Size = new System.Drawing.Size(116, 12);
+            this.lbl_Account.Size = new System.Drawing.Size(140, 12);
             this.lbl_Account.TabIndex = 0;
             this.lbl_Account.Text = "label1";
             // 
@@ -99,12 +99,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AccountTag";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Size = new System.Drawing.Size(248, 90);
-            this.Click += new System.EventHandler(this.AccountTag_Click);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
