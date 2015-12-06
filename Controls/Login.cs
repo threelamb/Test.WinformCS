@@ -29,7 +29,7 @@ namespace Controls
             var mbox = string.Empty;
             var name = this.tbx_name.Text;
             var passwrod = this.tbx_password.Text;
-            ILoginBusiness LoginBiz = new LoginBusiness();
+            ILoginBuz LoginBiz = new LoginBuz();
 
             //if (LoginBiz.VerifyPara(ref mbox, name, passwrod)
             //    && LoginBiz.login(name, passwrod))

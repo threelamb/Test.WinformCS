@@ -55,12 +55,17 @@ namespace APIAgent.Concrete.Sterling
             return res;
         }
 
-        public override Array GetDestinationList()
+        public override List<string> GetDestinationList()
         {
-            Array res = System.Array.CreateInstance(typeof(string), 0);
+            List<string> res = new List<string>();
+            Array temp = System.Array.CreateInstance(typeof(string), 0);
             try
             {
-                stiapp.GetDestinationList(ref res);
+                stiapp.GetDestinationList(ref temp);
+                foreach (var item in temp)
+                {
+                    res.Add(item.ToString());
+                }
             }
             catch (Exception ex)
             {

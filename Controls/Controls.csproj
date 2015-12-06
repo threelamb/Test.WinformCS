@@ -36,6 +36,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Client\bin\Debug\Controls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -44,11 +48,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component\AccountBasicInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\AccountBasicInfo.Designer.cs">
+      <DependentUpon>AccountBasicInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Component\AccountList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Component\AccountList.Designer.cs">
       <DependentUpon>AccountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\AccountSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component\AccountSetting.Designer.cs">
+      <DependentUpon>AccountSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\AccountTag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\AccountTag.Designer.cs">
+      <DependentUpon>AccountTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ChannelList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\ChannelList.Designer.cs">
+      <DependentUpon>ChannelList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ChannelTag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\ChannelTag.Designer.cs">
+      <DependentUpon>ChannelTag.cs</DependentUpon>
     </Compile>
     <Compile Include="Component\ClientMainMenu.cs">
       <SubType>UserControl</SubType>
@@ -75,8 +109,23 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Component\AccountBasicInfo.resx">
+      <DependentUpon>AccountBasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Component\AccountList.resx">
       <DependentUpon>AccountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\AccountSetting.resx">
+      <DependentUpon>AccountSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\AccountTag.resx">
+      <DependentUpon>AccountTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\ChannelList.resx">
+      <DependentUpon>ChannelList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\ChannelTag.resx">
+      <DependentUpon>ChannelTag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\ClientMainMenu.resx">
       <DependentUpon>ClientMainMenu.cs</DependentUpon>
@@ -120,6 +169,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{a7330d75-dfdf-4c3c-9b91-b26472df21cc}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{ca346d67-1845-41d5-9e74-e56c5012bb47}</Project>
+      <Name>Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resource\Resource.csproj">
       <Project>{e63b8e32-de1d-491c-93a6-34884c77426b}</Project>

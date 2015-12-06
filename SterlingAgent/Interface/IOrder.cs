@@ -20,6 +20,6 @@ namespace APIAgent.Interface
         public abstract int SubmitOrder(ref OrderModel structOrder);
         public abstract int CancelOrder();
         public abstract string MakeClOrderID(string account);
-        public abstract Array GetDestinationList();
+        public abstract List<string> GetDestinationList();
     }
 }

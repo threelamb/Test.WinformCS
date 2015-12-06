@@ -8,7 +8,7 @@ using Common;
 
 namespace ClientBusiness.Login
 {
-    public class LoginBusiness : ILoginBusiness
+    public class LoginBuz : ILoginBuz
     {
         public bool login(string user, string password)
         {

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2FBE2D82-D3E2-480C-85F1-80AA4598B776}</ProjectGuid>
+    <ProjectGuid>{CA346D67-1845-41D5-9E74-E56C5012BB47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClientBusiness</RootNamespace>
-    <AssemblyName>ClientBusiness</AssemblyName>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -39,29 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\AccountBuz.cs" />
-    <Compile Include="Account\IAccountBuz.cs" />
-    <Compile Include="Login\ILoginBuz.cs" />
-    <Compile Include="Login\LoginBuz.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="Channel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{a7330d75-dfdf-4c3c-9b91-b26472df21cc}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LoginAPI\LoginAPI.csproj">
-      <Project>{1d6495f3-a715-4bde-9195-a37625d2012e}</Project>
-      <Name>LoginAPI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{ca346d67-1845-41d5-9e74-e56c5012bb47}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Resource\Resource.csproj">
-      <Project>{e63b8e32-de1d-491c-93a6-34884c77426b}</Project>
-      <Name>Resource</Name>
+    <ProjectReference Include="..\SterlingAgent\APIAgent.csproj">
+      <Project>{b8e686dd-1257-4ef6-96cc-7392bf789e13}</Project>
+      <Name>APIAgent</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

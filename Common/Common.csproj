@@ -42,10 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\FileOperate\FileBase.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Entity\FileType.cs" />
     <Compile Include="Entity\KeyValue.cs" />
+    <Compile Include="Concrete\FileOperate\AccountFile.cs" />
     <Compile Include="Extenstion\StrExtension.cs" />
     <Compile Include="Extenstion\TypeExtension.cs" />
+    <Compile Include="Extenstion\VerifyExtension.cs" />
     <Compile Include="Interface\Mapper\ITypeMapper.cs" />
     <Compile Include="Concrete\Mapper\TypeMapper.cs" />
     <Compile Include="JsonSerializer.cs" />
