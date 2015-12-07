@@ -12,6 +12,7 @@ namespace Common.Concrete.FileOperate
     {
         public T objSource;
         public string fName;
+        public string baseFolder = "Data";
         public FileBase()
         {
         }
@@ -24,7 +25,7 @@ namespace Common.Concrete.FileOperate
             try
             {
                 var temp = string.Empty;
-                var localPath = GetLocalPath();
+                var localPath = Path.Combine(GetLocalPath(), baseFolder);
                 var folder = GetFolder();
                 var fPath = Path.Combine(Path.Combine(localPath, folder), fName + GetFileExtension());
                 if (File.Exists(fPath))
@@ -51,7 +52,7 @@ namespace Common.Concrete.FileOperate
                 fName = fileName;
 
                 var content = Serialize();
-                var localPath = GetLocalPath();
+                var localPath = Path.Combine(GetLocalPath(), baseFolder);
                 var folder = GetFolder();
                 var folderPath = Path.Combine(localPath, folder);
                 var fPath = Path.Combine(folderPath, fName + GetFileExtension());
@@ -94,7 +95,7 @@ namespace Common.Concrete.FileOperate
             return Encoding.UTF8;
         }
 
-        internal virtual List<T> LoadFiles(string UserNam)
+        public virtual List<T> LoadFiles()
         {
             List<T> res;
 
@@ -102,7 +103,7 @@ namespace Common.Concrete.FileOperate
             try
             {
                 var temp = string.Empty;
-                var localPath = GetLocalPath();
+                var localPath = Path.Combine(GetLocalPath(), baseFolder);
                 var folder = GetFolder();
                 var folderPath = Path.Combine(localPath, folder);
                 var fPaths = Directory.GetFiles(folderPath, "*" + GetFileExtension());

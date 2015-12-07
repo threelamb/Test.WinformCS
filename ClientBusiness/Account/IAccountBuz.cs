@@ -8,7 +8,5 @@ namespace ClientBusiness.Account
     public interface IAccountBuz
     {
         List<string> GetDestinationByAccount(string account);
-
-        List<Model.AccountModel> LoadAccounts(string UserName);
     }
 }

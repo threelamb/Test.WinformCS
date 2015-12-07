@@ -24,7 +24,7 @@ namespace ClientBusiness.Login
             //#
             res = true;
 
-            new UserBuz(user).login();
+            new UserBuz().login(user);
 
             return res;
         }

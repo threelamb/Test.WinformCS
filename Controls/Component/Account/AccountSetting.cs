@@ -83,6 +83,7 @@ namespace Controls.Component
             account = this.accountBasicInfo1.Account;
             account.CDChannelList = this.cdCannelList.GetChannelList();
             account.TYChannelList = this.tyCannelList.GetChannelList();
+            account.UserID = UserModel.Current.UserID;
             return account;
         }
 

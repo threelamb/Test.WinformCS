@@ -22,8 +22,14 @@ namespace Client
             var res = new Login().ShowDialog();
             if (res != System.Windows.Forms.DialogResult.OK)
             {
+                LoadAccount();
                 this.Close();
             }
+        }
+
+        private void LoadAccount()
+        {
+            this.accountList1.LoadAccount();
         }
     }
 }

@@ -59,7 +59,11 @@ namespace Controls.Component.Channel
         {
             var res = new ChannelAliasModel();
 
-            if (this.tbx_Alias.Text.Trim().IsNullOrEmpity())
+            if (!this.tbx_Alias.Text.Trim().IsNullOrEmpity())
+            {
+                res.Alias = this.tbx_Alias.Text;
+            }
+            else
             {
                 res.Alias = this._Data.Alias;
             }

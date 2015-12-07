@@ -48,7 +48,6 @@
     <Compile Include="Entity\FileType.cs" />
     <Compile Include="Entity\KeyValue.cs" />
     <Compile Include="Concrete\FileOperate\AccountFile.cs" />
-    <Compile Include="Extenstion\FileExtention.cs" />
     <Compile Include="Extenstion\StrExtension.cs" />
     <Compile Include="Extenstion\TypeExtension.cs" />
     <Compile Include="Extenstion\VerifyExtension.cs" />

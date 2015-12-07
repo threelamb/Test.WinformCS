@@ -70,7 +70,11 @@ namespace Controls.Component
         public AccountList()
         {
             InitializeComponent();
-            var Accounts = new AccountBuz().LoadAccounts(this.UserName);
+        }
+
+        public void LoadAccount()
+        {
+            var Accounts = new AccountBuz().LoadAccounts();
             foreach (var item in Accounts)
             {
                 AddAccount(item);

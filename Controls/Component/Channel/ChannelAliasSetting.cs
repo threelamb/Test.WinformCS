@@ -31,7 +31,8 @@ namespace Controls.Component.Channel
         private void btn_OK_Click(object sender, EventArgs e)
         {
             UserModel.Current.ChannelSetting.TYChannelList = this.TYChannels.GetAliasList();
-            UserModel.Current.ChannelSetting.TYChannelList = this.TYChannels.GetAliasList();
+            UserModel.Current.ChannelSetting.CDChannelList = this.CDChannels.GetAliasList();
+            new UserBuz().Save();
             this.Close();
         }
 

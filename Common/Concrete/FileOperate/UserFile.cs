@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Common.Concrete.FileOperate
 {
-    class UserFile<T> : FileBase<T>
+    public class UserFile<T> : FileBase<T>
         where T : class
     {
         internal override string GetFolder()

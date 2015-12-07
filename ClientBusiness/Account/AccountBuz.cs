@@ -6,6 +6,7 @@ using Model;
 using Common;
 using Common.Entity;
 using APIAgent.Factory;
+using Common.Concrete.FileOperate;
 
 namespace ClientBusiness.Account
 {
@@ -26,19 +27,27 @@ namespace ClientBusiness.Account
             return res;
         }
 
-        public void Save(Model.AccountModel res)
+        public void Save(AccountModel para)
         {
-            res.SaveLocal<Model.AccountModel>(FileType.Account, res.Alias);
+            new AccountFile<AccountModel>(UserModel.Current.UserID).Save(para, para.Alias);
         }
 
         public Model.AccountModel Read(string fileName)
         {
-            return fileName.ReadFile<Model.AccountModel>(FileType.Account);
+            return new AccountFile<AccountModel>(UserModel.Current.UserID).Read(fileName);
         }
 
-        public List<Model.AccountModel> LoadAccounts(string UserName)
+        public List<Model.AccountModel> LoadAccounts()
         {
-            return UserName.LoadFile<Model.AccountModel>(FileType.Account);
+            var res = new AccountFile<AccountModel>(UserModel.Current.UserID).LoadFiles();
+            foreach (var item in res)
+            {
+                if (item.UserID.IsNullOrEmpity())
+                {
+                    item.UserID = UserModel.Current.UserID;
+                }
+            }
+            return res;
         }
     }
 }
