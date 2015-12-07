@@ -19,7 +19,7 @@ namespace Comunication
         public void Start()
         {
             //服务器IP地址  
-            IPAddress ip = IPAddress.Parse("172.0.0.1");
+            IPAddress ip = IPAddress.Parse("127.0.0.1");
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             serverSocket.Bind(new IPEndPoint(ip, myProt));  //绑定IP地址：端口  
             serverSocket.Listen(10);    //设定最多10个排队连接请求  

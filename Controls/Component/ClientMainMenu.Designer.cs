@@ -32,12 +32,12 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.用户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.交易ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.通道别名设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.窗口ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsb_bindForm = new System.Windows.Forms.ToolStripButton();
             this.tsb_refreshBind = new System.Windows.Forms.ToolStripButton();
             this.tsl_bindFormCount = new System.Windows.Forms.ToolStripLabel();
-            this.通道别名设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +75,13 @@
             this.交易ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.交易ToolStripMenuItem.Text = "交易";
             // 
+            // 通道别名设置ToolStripMenuItem
+            // 
+            this.通道别名设置ToolStripMenuItem.Name = "通道别名设置ToolStripMenuItem";
+            this.通道别名设置ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.通道别名设置ToolStripMenuItem.Text = "通道别名设置";
+            this.通道别名设置ToolStripMenuItem.Click += new System.EventHandler(this.通道别名设置ToolStripMenuItem_Click);
+            // 
             // 窗口ToolStripMenuItem
             // 
             this.窗口ToolStripMenuItem.Name = "窗口ToolStripMenuItem";
@@ -96,6 +103,7 @@
             // tsb_bindForm
             // 
             this.tsb_bindForm.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb_bindForm.Image = global::Controls.Properties.Resources.Magic_wand_24px_1185779_easyicon_net;
             this.tsb_bindForm.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_bindForm.Name = "tsb_bindForm";
             this.tsb_bindForm.Size = new System.Drawing.Size(23, 22);
@@ -104,6 +112,7 @@
             // tsb_refreshBind
             // 
             this.tsb_refreshBind.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb_refreshBind.Image = global::Controls.Properties.Resources.refresh_24px_1096680_easyicon_net;
             this.tsb_refreshBind.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_refreshBind.Name = "tsb_refreshBind";
             this.tsb_refreshBind.Size = new System.Drawing.Size(23, 22);
@@ -114,13 +123,6 @@
             this.tsl_bindFormCount.Name = "tsl_bindFormCount";
             this.tsl_bindFormCount.Size = new System.Drawing.Size(15, 22);
             this.tsl_bindFormCount.Text = "0";
-            // 
-            // 通道别名设置ToolStripMenuItem
-            // 
-            this.通道别名设置ToolStripMenuItem.Name = "通道别名设置ToolStripMenuItem";
-            this.通道别名设置ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.通道别名设置ToolStripMenuItem.Text = "通道别名设置";
-            this.通道别名设置ToolStripMenuItem.Click += new System.EventHandler(this.通道别名设置ToolStripMenuItem_Click);
             // 
             // ClientMainMenu
             // 

@@ -144,16 +144,20 @@ namespace Controls.Component
         {
             if (this.Current == null)
             {
-                new AccountSetting(this, new AccountModel(), true).Show();
+                new AccountSetting(this, new AccountModel(), true).ShowDialog();
             }
             else
             {
-                new AccountSetting(this, this.Current.Account, false).Show();
+                new AccountSetting(this, this.Current.Account, false).ShowDialog();
             }
         }
 
         private void tsb_connectAccount_Click(object sender, EventArgs e)
         {
+            if (this.Current == null)
+            {
+                return;
+            }
             this.Current.Account.IsConnected = true;
             this.Current = this.Current;
             new AccountBuz().Connect(this.Current.Account);
@@ -161,18 +165,30 @@ namespace Controls.Component
 
         private void tsb_disconnectAccount_Click(object sender, EventArgs e)
         {
+            if (this.Current == null)
+            {
+                return;
+            }
             this.Current.Account.IsConnected = false;
             this.Current = this.Current;
         }
 
         private void tsb_enableAccount_Click(object sender, EventArgs e)
         {
+            if (this.Current == null)
+            {
+                return;
+            }
             this.Current.Account.IsEnable = true;
             this.Current = this.Current;
         }
 
         private void tsb_disableAccount_Click(object sender, EventArgs e)
         {
+            if (this.Current == null)
+            {
+                return;
+            }
             this.Current.Account.IsEnable = false;
             this.Current = this.Current;
         }

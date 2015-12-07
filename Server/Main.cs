@@ -18,7 +18,7 @@ namespace Server
             InitializeComponent();
 
             this.cbx_Account.DataSource = new List<string>() { GetAccount() };
-            this.cbx_Channel.DataSource = APIFactory.CreateOrder().GetDestinationList();
+            this.cbx_Channel.DataSource = GetDestinationList();
         }
 
         private void btn_Start_Click(object sender, EventArgs e)
@@ -36,6 +36,18 @@ namespace Server
 
         }
 
+        private List<string> GetDestinationList()
+        {
+            List<string> res = new List<string>();
+            try
+            {
+                res = APIFactory.CreateOrder().GetDestinationList();
+            }
+            catch (Exception)
+            {
+            }
+            return res;
+        }
         private string GetAccount()
         {
             string Account = string.Empty;

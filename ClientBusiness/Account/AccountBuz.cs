@@ -57,7 +57,7 @@ namespace ClientBusiness.Account
                 var temp = new SocketPara();
                 temp.ID = para.AccountName;
                 //temp.IP = para.IP;
-                temp.IP = "172.0.0.1";
+                temp.IP = "127.0.0.1";
                 temp.Port = 8888;
                 SocketClient.ConnectServer(temp);
             }

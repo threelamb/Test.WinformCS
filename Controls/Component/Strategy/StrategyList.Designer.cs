@@ -80,6 +80,7 @@
             // tsb_AddStrategy
             // 
             this.tsb_AddStrategy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb_AddStrategy.Image = global::Controls.Properties.Resources.Document_new_icon_24px_1081653_easyicon_net;
             this.tsb_AddStrategy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_AddStrategy.Name = "tsb_AddStrategy";
             this.tsb_AddStrategy.Size = new System.Drawing.Size(23, 22);
@@ -89,6 +90,7 @@
             // tsb_DeleteStrategy
             // 
             this.tsb_DeleteStrategy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb_DeleteStrategy.Image = global::Controls.Properties.Resources.document_minus_24px_1130398_easyicon_net;
             this.tsb_DeleteStrategy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_DeleteStrategy.Name = "tsb_DeleteStrategy";
             this.tsb_DeleteStrategy.Size = new System.Drawing.Size(23, 22);
@@ -98,6 +100,7 @@
             // tsb_EditeStrategy
             // 
             this.tsb_EditeStrategy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb_EditeStrategy.Image = global::Controls.Properties.Resources.document_edit_24px_1129273_easyicon_net;
             this.tsb_EditeStrategy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_EditeStrategy.Name = "tsb_EditeStrategy";
             this.tsb_EditeStrategy.Size = new System.Drawing.Size(23, 22);
@@ -107,6 +110,7 @@
             // tsb_EnableStrategy
             // 
             this.tsb_EnableStrategy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb_EnableStrategy.Image = global::Controls.Properties.Resources.document_checkmark_24px_1111272_easyicon_net;
             this.tsb_EnableStrategy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_EnableStrategy.Name = "tsb_EnableStrategy";
             this.tsb_EnableStrategy.Size = new System.Drawing.Size(23, 22);
@@ -116,6 +120,7 @@
             // tsb_DisableStrategy
             // 
             this.tsb_DisableStrategy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsb_DisableStrategy.Image = global::Controls.Properties.Resources.delete_file_24px_1187316_easyicon_net;
             this.tsb_DisableStrategy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_DisableStrategy.Name = "tsb_DisableStrategy";
             this.tsb_DisableStrategy.Size = new System.Drawing.Size(23, 22);
