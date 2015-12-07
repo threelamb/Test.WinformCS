@@ -13,7 +13,6 @@ namespace Controls.Component.Channel
     public partial class ChannelAliasList : UserControl
     {
         List<ChannelAliasTag> ItemList = new List<ChannelAliasTag>();
-        int count = 10;
         private List<KeyValuePair<string, ChannelAliasModel>> list;
         public ChannelAliasList(List<ChannelAliasModel> model)
         {
@@ -24,8 +23,6 @@ namespace Controls.Component.Channel
                 var ItemUI = new ChannelAliasTag();
                 ItemUI.Data = itemModel;
                 ItemList.Add(ItemUI);
-
-                ItemList.Add(ItemUI);
                 ItemUI.Dock = System.Windows.Forms.DockStyle.Fill;
                 ItemUI.Name = "ItemUI" + (i.ToString());
                 this.tlp_ChannelList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -33,14 +30,17 @@ namespace Controls.Component.Channel
                 i++;
                 ItemUI.TabIndex = i;
             }
+            this.tlp_ChannelList.RowStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp_ChannelList.RowCount = i + 1;
         }
 
-        public List<ChannelAliasModel> GetAliasList()
+        public Dictionary<string, ChannelAliasModel> GetAliasList()
         {
-            List<ChannelAliasModel> res = new List<ChannelAliasModel>();
+            var res = new Dictionary<string, ChannelAliasModel>();
             foreach (var item in ItemList)
             {
-                res.Add(item.GetAlias());
+                var temp = item.GetAlias();
+                res.Add(temp.ChannelName, temp);
             }
             return res;
         }

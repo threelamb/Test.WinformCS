@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Model.AccountModel accountModel1 = new Model.AccountModel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountSetting));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -100,6 +102,14 @@
             // 
             // accountBasicInfo1
             // 
+            accountModel1.AccountName = "";
+            accountModel1.Alias = "";
+            accountModel1.Channel = "";
+            accountModel1.ChannelSource = ((System.Collections.Generic.List<string>)(resources.GetObject("accountModel1.ChannelSource")));
+            accountModel1.IP = "";
+            accountModel1.IsConnected = false;
+            accountModel1.IsEnable = false;
+            this.accountBasicInfo1.Account = accountModel1;
             this.accountBasicInfo1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.accountBasicInfo1.Location = new System.Drawing.Point(3, 17);
             this.accountBasicInfo1.Name = "accountBasicInfo1";
@@ -159,11 +169,11 @@
             this.btn_RefreshChannel.UseVisualStyleBackColor = true;
             this.btn_RefreshChannel.Click += new System.EventHandler(this.btn_RefreshChannel_Click);
             // 
-            // button1
+            // btn_Save
             // 
             this.btn_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Save.Location = new System.Drawing.Point(251, 301);
-            this.btn_Save.Name = "button1";
+            this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(74, 23);
             this.btn_Save.TabIndex = 3;
             this.btn_Save.Text = "确定";

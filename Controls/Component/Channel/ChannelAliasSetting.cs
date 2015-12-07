@@ -14,14 +14,30 @@ namespace Controls.Component.Channel
     public partial class ChannelAliasSetting : Form
     {
 
-        ChannelAliasList normalChannels = new ChannelAliasList(UserModel.Current.ChannelSetting.TYChannelList.Values.ToList());
+        ChannelAliasList TYChannels = new ChannelAliasList(UserModel.Current.ChannelSetting.TYChannelList.Values.ToList());
+        ChannelAliasList CDChannels = new ChannelAliasList(UserModel.Current.ChannelSetting.CDChannelList.Values.ToList());
 
         public ChannelAliasSetting()
         {
             InitializeComponent();
 
-            normalChannels.Dock = DockStyle.Fill;
-            this.tabPage1.Controls.Add(normalChannels);
+            TYChannels.Dock = DockStyle.Fill;
+            this.tabPage1.Controls.Add(TYChannels);
+
+            CDChannels.Dock = DockStyle.Fill;
+            this.tabPage2.Controls.Add(CDChannels);
+        }
+
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            UserModel.Current.ChannelSetting.TYChannelList = this.TYChannels.GetAliasList();
+            UserModel.Current.ChannelSetting.TYChannelList = this.TYChannels.GetAliasList();
+            this.Close();
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

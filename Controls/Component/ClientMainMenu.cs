@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Controls.Component.Channel;
 
 namespace Controls.Component
 {
@@ -18,7 +19,7 @@ namespace Controls.Component
 
         private void 通道别名设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new ChannelAliasSetting().ShowDialog();
         }
     }
 }

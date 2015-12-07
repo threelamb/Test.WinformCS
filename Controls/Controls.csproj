@@ -114,10 +114,10 @@
     <Compile Include="Component\ClientMainMenu.Designer.cs">
       <DependentUpon>ClientMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\OrderChannel.cs">
+    <Compile Include="Component\Channel\OrderChannel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\OrderChannel.Designer.cs">
+    <Compile Include="Component\Channel\OrderChannel.Designer.cs">
       <DependentUpon>OrderChannel.cs</DependentUpon>
     </Compile>
     <Compile Include="Component\Strategy\StrategyList.cs">
@@ -131,18 +131,6 @@
     </Compile>
     <Compile Include="Component\Strategy\StrategySetting.Designer.cs">
       <DependentUpon>StrategySetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ItraderMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ItraderMain.Designer.cs">
-      <DependentUpon>ItraderMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Component\Account\AccountBasicInfo.resx">
@@ -178,7 +166,7 @@
     <EmbeddedResource Include="Component\ClientMainMenu.resx">
       <DependentUpon>ClientMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\OrderChannel.resx">
+    <EmbeddedResource Include="Component\Channel\OrderChannel.resx">
       <DependentUpon>OrderChannel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\Strategy\StrategyList.resx">
@@ -186,12 +174,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Component\Strategy\StrategySetting.resx">
       <DependentUpon>StrategySetting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ItraderMain.resx">
-      <DependentUpon>ItraderMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
