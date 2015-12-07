@@ -114,10 +114,10 @@
     <Compile Include="Component\ClientMainMenu.Designer.cs">
       <DependentUpon>ClientMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\Channel\OrderChannel.cs">
+    <Compile Include="Component\Strategy\OrderChannel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\Channel\OrderChannel.Designer.cs">
+    <Compile Include="Component\Strategy\OrderChannel.Designer.cs">
       <DependentUpon>OrderChannel.cs</DependentUpon>
     </Compile>
     <Compile Include="Component\Strategy\StrategyList.cs">
@@ -166,7 +166,7 @@
     <EmbeddedResource Include="Component\ClientMainMenu.resx">
       <DependentUpon>ClientMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\Channel\OrderChannel.resx">
+    <EmbeddedResource Include="Component\Strategy\OrderChannel.resx">
       <DependentUpon>OrderChannel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\Strategy\StrategyList.resx">

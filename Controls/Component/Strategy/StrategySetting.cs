@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Model;
+using Controls.Component;
 
 namespace Controls.Component
 {
@@ -16,9 +18,15 @@ namespace Controls.Component
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        public StrategyModel strategy;
 
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            switch (this.cbx_Commend.SelectedItem.ToString())
+            {
+                default:
+                    break;
+            }
         }
 
         private void btn_UP_Click(object sender, EventArgs e)

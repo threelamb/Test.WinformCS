@@ -7,12 +7,12 @@ using System.Text;
 
 namespace Common.Concrete.FileOperate
 {
-    public class FileBase<T>
+    public class FileBase<T> : IFile
        where T : class
     {
         public T objSource;
         public string fName;
-        public string baseFolder = "Data";
+
         public FileBase()
         {
         }
@@ -44,7 +44,7 @@ namespace Common.Concrete.FileOperate
             return temp.ToJsonObj<T>();
         }
 
-        public bool Save(T obj, string fileName)
+        public virtual bool Save(T obj, string fileName)
         {
             try
             {
@@ -69,11 +69,28 @@ namespace Common.Concrete.FileOperate
             return true;
         }
 
-        private string GetLocalPath()
+        public virtual bool Appand(string fileName, string content)
         {
-            var uri = new Uri(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase));
-            return uri.LocalPath;
+            try
+            {
+                fName = fileName;
+
+                var localPath = Path.Combine(GetLocalPath(), baseFolder);
+                var folder = GetFolder();
+                var folderPath = Path.Combine(localPath, folder);
+                var fPath = Path.Combine(folderPath, fName + GetFileExtension());
+                if (!Directory.Exists(folderPath)) Directory.CreateDirectory(folderPath);
+                if (Directory.Exists(fPath)) Directory.Delete(fPath);
+                File.AppendAllText(fPath, content, Encoding.UTF8);
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
+            return true;
         }
+       
 
         internal virtual string GetFolder()
         {

@@ -7,6 +7,7 @@ using Common;
 using Common.Entity;
 using APIAgent.Factory;
 using Common.Concrete.FileOperate;
+using Comunication;
 
 namespace ClientBusiness.Account
 {
@@ -48,6 +49,18 @@ namespace ClientBusiness.Account
                 }
             }
             return res;
+        }
+
+        public void Connect(AccountModel para)
+        {
+            {
+                var temp = new SocketPara();
+                temp.ID = para.AccountName;
+                //temp.IP = para.IP;
+                temp.IP = "172.0.0.1";
+                temp.Port = 8888;
+                SocketClient.ConnectServer(temp);
+            }
         }
     }
 }

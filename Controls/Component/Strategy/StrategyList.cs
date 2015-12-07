@@ -18,7 +18,7 @@ namespace Controls.Component
 
         private void tsb_AddStrategy_Click(object sender, EventArgs e)
         {
-
+            new StrategySetting().Show();
         }
     }
 }

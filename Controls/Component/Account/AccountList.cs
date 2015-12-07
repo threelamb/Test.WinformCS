@@ -156,6 +156,7 @@ namespace Controls.Component
         {
             this.Current.Account.IsConnected = true;
             this.Current = this.Current;
+            new AccountBuz().Connect(this.Current.Account);
         }
 
         private void tsb_disconnectAccount_Click(object sender, EventArgs e)

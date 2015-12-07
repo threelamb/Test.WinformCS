@@ -43,7 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\FileOperate\FileBase.cs" />
+    <Compile Include="Concrete\FileOperate\IFile.cs" />
+    <Compile Include="Concrete\FileOperate\LogFile.cs" />
     <Compile Include="Concrete\FileOperate\UserFile.cs" />
+    <Compile Include="Concrete\Log.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Entity\FileType.cs" />
     <Compile Include="Entity\KeyValue.cs" />

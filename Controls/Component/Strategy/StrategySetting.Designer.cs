@@ -43,7 +43,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.cbx_Commend = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.lbx_CommendList = new System.Windows.Forms.ListBox();
             this.btn_UP = new System.Windows.Forms.Button();
             this.btn_Down = new System.Windows.Forms.Button();
@@ -218,7 +218,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbx_Commend, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btn_Add, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.lbx_CommendList, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btn_UP, 3, 2);
             this.tableLayoutPanel2.Controls.Add(this.btn_Down, 3, 3);
@@ -251,20 +251,27 @@
             this.cbx_Commend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.cbx_Commend, 2);
             this.cbx_Commend.FormattingEnabled = true;
+            this.cbx_Commend.Items.AddRange(new object[] {
+            "延迟等待",
+            "普通订单",
+            "普通藏单",
+            "基准订单",
+            "基准藏单",
+            "撤销全部订单"});
             this.cbx_Commend.Location = new System.Drawing.Point(3, 35);
             this.cbx_Commend.Name = "cbx_Commend";
             this.cbx_Commend.Size = new System.Drawing.Size(267, 20);
             this.cbx_Commend.TabIndex = 1;
             // 
-            // button1
+            // btn_Add
             // 
-            this.button1.Location = new System.Drawing.Point(276, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "添加";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Add.Location = new System.Drawing.Point(276, 33);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(39, 23);
+            this.btn_Add.TabIndex = 2;
+            this.btn_Add.Text = "添加";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // lbx_CommendList
             // 
@@ -371,7 +378,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbx_Commend;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.ListBox lbx_CommendList;
         private System.Windows.Forms.Button btn_UP;
         private System.Windows.Forms.Button btn_Down;

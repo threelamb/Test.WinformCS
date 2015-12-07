@@ -52,6 +52,10 @@
       <Project>{a7330d75-dfdf-4c3c-9b91-b26472df21cc}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Comunication\Comunication.csproj">
+      <Project>{225148d6-698a-41f3-ad9a-3d3d2e51df4a}</Project>
+      <Name>Comunication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LoginAPI\LoginAPI.csproj">
       <Project>{1d6495f3-a715-4bde-9195-a37625d2012e}</Project>
       <Name>LoginAPI</Name>
