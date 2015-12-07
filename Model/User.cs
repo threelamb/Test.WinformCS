@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Model
 {
+    [Serializable]
     public class UserModel
     {
         static UserModel()

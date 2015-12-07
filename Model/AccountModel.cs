@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Model
 {
+    [Serializable]
     public class AccountModel
     {
         public string UserID;

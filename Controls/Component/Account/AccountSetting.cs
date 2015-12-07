@@ -85,5 +85,10 @@ namespace Controls.Component
             account.TYChannelList = this.tyCannelList.GetChannelList();
             return account;
         }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

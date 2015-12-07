@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Model.AccountModel accountModel1 = new Model.AccountModel();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountSetting));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -40,7 +39,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btn_RefreshChannel = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,7 +60,7 @@
             this.tableLayoutPanel1.Controls.Add(this.splitContainer1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_RefreshChannel, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_Save, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Cancel, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -102,14 +101,7 @@
             // 
             // accountBasicInfo1
             // 
-            accountModel1.AccountName = "";
-            accountModel1.Alias = "";
-            accountModel1.Channel = "";
-            accountModel1.ChannelSource = ((System.Collections.Generic.List<string>)(resources.GetObject("accountModel1.ChannelSource")));
-            accountModel1.IP = "";
-            accountModel1.IsConnected = false;
-            accountModel1.IsEnable = false;
-            this.accountBasicInfo1.Account = accountModel1;
+            this.accountBasicInfo1.Account = ((Model.AccountModel)(resources.GetObject("accountBasicInfo1.Account")));
             this.accountBasicInfo1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.accountBasicInfo1.Location = new System.Drawing.Point(3, 17);
             this.accountBasicInfo1.Name = "accountBasicInfo1";
@@ -180,15 +172,16 @@
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
-            // button2
+            // btn_Cancel
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(331, 301);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "取消";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancel.Location = new System.Drawing.Point(331, 301);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(74, 23);
+            this.btn_Cancel.TabIndex = 4;
+            this.btn_Cancel.Text = "取消";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // AccountSetting
             // 
@@ -220,7 +213,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_RefreshChannel;
         private System.Windows.Forms.Button btn_Save;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Cancel;
         private AccountBasicInfo accountBasicInfo1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
