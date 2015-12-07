@@ -5,12 +5,9 @@ using System.Text;
 
 namespace Model
 {
-    public class Channel
+    public class ChannelAliasModel
     {
-        public string ChannelName { get; set; }
-
+        public string ChannelName;
         public string Alias { get; set; }
-
-        public string ChannelValue { get; set; }
     }
 }

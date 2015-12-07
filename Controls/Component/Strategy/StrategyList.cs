@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace Controls.Component
 {
-    public partial class ClientMainMenu : UserControl
+    public partial class StrategyList : UserControl
     {
-        public ClientMainMenu()
+        public StrategyList()
         {
             InitializeComponent();
         }
 
-        private void 通道别名设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsb_AddStrategy_Click(object sender, EventArgs e)
         {
 
         }

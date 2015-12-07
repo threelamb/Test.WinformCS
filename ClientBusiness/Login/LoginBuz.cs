@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 ///
 using Common;
+using Model;
+using ClientBusiness.User;
 
 namespace ClientBusiness.Login
 {
@@ -16,8 +18,13 @@ namespace ClientBusiness.Login
 
             var req = new LoginAPI.Entity.LogInRequest() { UserID = user, Password = password };
             ILoginAPI ILoginAPI = new LoginAPI.LoginAPI();
-            var resp = ILoginAPI.Login(req);
-            res = resp.Success;
+            //var resp = ILoginAPI.Login(req);
+            //res = resp.Success;
+
+            //#
+            res = true;
+
+            new UserBuz(user).login();
 
             return res;
         }

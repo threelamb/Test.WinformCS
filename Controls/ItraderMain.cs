@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controls.Component.Channel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,9 +27,9 @@ namespace Controls
             }
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void 通道别名设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new ChannelAliasSetting().ShowDialog();
         }
     }
 }

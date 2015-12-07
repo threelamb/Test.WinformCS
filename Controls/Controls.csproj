@@ -48,40 +48,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Component\AccountBasicInfo.cs">
+    <Compile Include="Component\Account\AccountBasicInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\AccountBasicInfo.Designer.cs">
+    <Compile Include="Component\Account\AccountBasicInfo.Designer.cs">
       <DependentUpon>AccountBasicInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\AccountList.cs">
+    <Compile Include="Component\Account\AccountList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\AccountList.Designer.cs">
+    <Compile Include="Component\Account\AccountList.Designer.cs">
       <DependentUpon>AccountList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\AccountSetting.cs">
+    <Compile Include="Component\Account\AccountSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Component\AccountSetting.Designer.cs">
+    <Compile Include="Component\Account\AccountSetting.Designer.cs">
       <DependentUpon>AccountSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\AccountTag.cs">
+    <Compile Include="Component\Account\AccountTag.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\AccountTag.Designer.cs">
+    <Compile Include="Component\Account\AccountTag.Designer.cs">
       <DependentUpon>AccountTag.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\ChannelList.cs">
+    <Compile Include="Component\Channel\ChannelAliasList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\ChannelList.Designer.cs">
+    <Compile Include="Component\Channel\ChannelAliasList.Designer.cs">
+      <DependentUpon>ChannelAliasList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Channel\ChannelAliasSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component\Channel\ChannelAliasSetting.Designer.cs">
+      <DependentUpon>ChannelAliasSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Channel\ChannelAliasTag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\Channel\ChannelAliasTag.Designer.cs">
+      <DependentUpon>ChannelAliasTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Commend\BanchmarkOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\Commend\BanchmarkOrder.Designer.cs">
+      <DependentUpon>BanchmarkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Channel\ChannelList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\Channel\ChannelList.Designer.cs">
       <DependentUpon>ChannelList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\ChannelTag.cs">
+    <Compile Include="Component\Channel\ChannelTag.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\ChannelTag.Designer.cs">
+    <Compile Include="Component\Channel\ChannelTag.Designer.cs">
       <DependentUpon>ChannelTag.cs</DependentUpon>
     </Compile>
     <Compile Include="Component\ClientMainMenu.cs">
@@ -90,11 +114,23 @@
     <Compile Include="Component\ClientMainMenu.Designer.cs">
       <DependentUpon>ClientMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Component\StrategyList.cs">
+    <Compile Include="Component\OrderChannel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\StrategyList.Designer.cs">
+    <Compile Include="Component\OrderChannel.Designer.cs">
+      <DependentUpon>OrderChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Strategy\StrategyList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\Strategy\StrategyList.Designer.cs">
       <DependentUpon>StrategyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\Strategy\StrategySetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component\Strategy\StrategySetting.Designer.cs">
+      <DependentUpon>StrategySetting.cs</DependentUpon>
     </Compile>
     <Compile Include="ItraderMain.cs">
       <SubType>Form</SubType>
@@ -109,29 +145,47 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Component\AccountBasicInfo.resx">
+    <EmbeddedResource Include="Component\Account\AccountBasicInfo.resx">
       <DependentUpon>AccountBasicInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\AccountList.resx">
+    <EmbeddedResource Include="Component\Account\AccountList.resx">
       <DependentUpon>AccountList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\AccountSetting.resx">
+    <EmbeddedResource Include="Component\Account\AccountSetting.resx">
       <DependentUpon>AccountSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\AccountTag.resx">
+    <EmbeddedResource Include="Component\Account\AccountTag.resx">
       <DependentUpon>AccountTag.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\ChannelList.resx">
+    <EmbeddedResource Include="Component\Channel\ChannelAliasList.resx">
+      <DependentUpon>ChannelAliasList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Channel\ChannelAliasSetting.resx">
+      <DependentUpon>ChannelAliasSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Channel\ChannelAliasTag.resx">
+      <DependentUpon>ChannelAliasTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Commend\BanchmarkOrder.resx">
+      <DependentUpon>BanchmarkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Channel\ChannelList.resx">
       <DependentUpon>ChannelList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\ChannelTag.resx">
+    <EmbeddedResource Include="Component\Channel\ChannelTag.resx">
       <DependentUpon>ChannelTag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Component\ClientMainMenu.resx">
       <DependentUpon>ClientMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Component\StrategyList.resx">
+    <EmbeddedResource Include="Component\OrderChannel.resx">
+      <DependentUpon>OrderChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Strategy\StrategyList.resx">
       <DependentUpon>StrategyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component\Strategy\StrategySetting.resx">
+      <DependentUpon>StrategySetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItraderMain.resx">
       <DependentUpon>ItraderMain.cs</DependentUpon>
@@ -221,6 +275,7 @@
   <ItemGroup>
     <None Include="Resources\start_here_24px_572110_easyicon.net.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

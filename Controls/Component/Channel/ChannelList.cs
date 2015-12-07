@@ -14,34 +14,46 @@ namespace Controls.Component
     public partial class ChannelList : UserControl
     {
         List<ChannelTag> ItemList = new List<ChannelTag>();
+        private List<ChannelModel> list;
+        private bool p;
         public ChannelTag Current { get; set; }
 
-        public ChannelList(List<Channel> channelList)
+        public ChannelList(List<ChannelModel> channelList, bool IsCD)
         {
             InitializeComponent();
+
+            SetIsCD(channelList, IsCD);
             SetChannelList(channelList);
         }
 
-        public List<Channel> GetChannelList()
+        private void SetIsCD(List<ChannelModel> channelList, bool IsCD)
+        {
+            foreach (var item in channelList)
+            {
+                item.IsCDChannel = IsCD;
+            }
+        }
+
+        public List<ChannelModel> GetChannelList()
         {
             return ItemList.Select(o => o.Channel).ToList();
         }
 
-        public void SetChannelList(List<Channel> channelList)
+        public void SetChannelList(List<ChannelModel> channelList)
         {
             int i = 0;
-            foreach (var item in channelList)
+            foreach (var itemModel in channelList)
             {
-                ChannelTag accountTag = new ChannelTag(this, item);
-                ItemList.Add(accountTag);
-                accountTag.Dock = System.Windows.Forms.DockStyle.Fill;
-                accountTag.Name = "accountTag" + (i.ToString());
+                ChannelTag ItemUI = new ChannelTag(this, itemModel);
+                ItemList.Add(ItemUI);
+                ItemUI.Dock = System.Windows.Forms.DockStyle.Fill;
+                ItemUI.Name = "ItemUI" + (i.ToString());
                 this.tlp_ChannelList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-                this.tlp_ChannelList.Controls.Add(accountTag, 0, i);
+                this.tlp_ChannelList.Controls.Add(ItemUI, 0, i);
                 i++;
-                accountTag.TabIndex = i;
+                ItemUI.TabIndex = i;
 
-                Current = accountTag;
+                Current = ItemUI;
             }
         }
 

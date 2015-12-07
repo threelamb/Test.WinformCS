@@ -9,6 +9,6 @@ namespace ClientBusiness.Account
     {
         List<string> GetDestinationByAccount(string account);
 
-        List<Model.Account> LoadAccounts(string UserName);
+        List<Model.AccountModel> LoadAccounts(string UserName);
     }
 }

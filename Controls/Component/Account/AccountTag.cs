@@ -13,9 +13,9 @@ namespace Controls.Component
     public partial class AccountTag : UserControl
     {
         private AccountList _accountList;
-        private Account _account;
+        private AccountModel _account;
 
-        public AccountTag(AccountList accountList, Model.Account account)
+        public AccountTag(AccountList accountList, Model.AccountModel account)
         {
             InitializeComponent();
             this._accountList = accountList;
@@ -62,7 +62,7 @@ namespace Controls.Component
             this.BackColor = Color.Red;
         }
 
-        public Account Account
+        public AccountModel Account
         {
             get { return _account; }
             set

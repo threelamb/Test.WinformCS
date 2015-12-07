@@ -6,22 +6,24 @@ using System.Text;
 
 namespace Model
 {
-    public class Account
+    public class AccountModel
     {
+        public string UserID;
+
         //通用通道
-        public List<Channel> TYChannelList
+        public List<ChannelModel> TYChannelList
         {
             get
             {
                 if (_TYChannelList == null)
                 {
-                    _TYChannelList = new List<Channel>();
+                    _TYChannelList = new List<ChannelModel>();
                     for (int i = 0; i < 10; i++)
                     {
-                        Channel c = new Channel();
+                        ChannelModel c = new ChannelModel();
                         c.ChannelName = "通用通道" + (i + 1).ToString();
                         c.ChannelValue = string.Empty;
-                        c.Alias = "通用通道" + (i + 1).ToString();
+                        c.IsCDChannel = false;
                         _TYChannelList.Add(c);
                     }
                 }
@@ -33,24 +35,24 @@ namespace Model
             }
         }
 
-        private List<Channel> _TYChannelList;
+        private List<ChannelModel> _TYChannelList;
 
         /// <summary>
         /// 藏单通道
         /// </summary>
-        public List<Channel> CDChannelList
+        public List<ChannelModel> CDChannelList
         {
             get
             {
                 if (_CDChannelList == null)
                 {
-                    _CDChannelList = new List<Channel>();
+                    _CDChannelList = new List<ChannelModel>();
                     for (int i = 0; i < 10; i++)
                     {
-                        Channel c = new Channel();
+                        ChannelModel c = new ChannelModel();
                         c.ChannelName = "藏单通道" + (i + 1).ToString();
                         c.ChannelValue = string.Empty;
-                        c.Alias = "藏单通道" + (i + 1).ToString();
+                        c.IsCDChannel = true;
                         _CDChannelList.Add(c);
                     }
                 }
@@ -62,7 +64,7 @@ namespace Model
             }
         }
 
-        private List<Channel> _CDChannelList;
+        private List<ChannelModel> _CDChannelList;
 
         public string AccountName { get; set; }
 

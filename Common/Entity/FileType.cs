@@ -10,6 +10,7 @@ namespace Common.Entity
         Account = 0,
         Strategy = 1,
         ActionLog = 2,
-        ExceptionLog = 3
+        ExceptionLog = 3,
+        User
     }
 }

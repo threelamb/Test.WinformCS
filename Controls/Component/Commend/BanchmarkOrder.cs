@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace Controls.Component
 {
-    public partial class ClientMainMenu : UserControl
+    public partial class BanchmarkOrder : UserControl
     {
-        public ClientMainMenu()
+        public BanchmarkOrder()
         {
             InitializeComponent();
-        }
-
-        private void 通道别名设置ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

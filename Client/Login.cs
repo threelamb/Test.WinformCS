@@ -26,14 +26,15 @@ namespace Client
 
         private void btn_login_Click(object sender, EventArgs e)
         {
+            //var name = this.tbx_name.Text;
+            //var passwrod = this.tbx_password.Text;
+            var name = "catsky";
+            var passwrod = "passwrod";
             var mbox = string.Empty;
-            var name = this.tbx_name.Text;
-            var passwrod = this.tbx_password.Text;
             ILoginBuz LoginBiz = new LoginBuz();
 
-            //if (LoginBiz.VerifyPara(ref mbox, name, passwrod)
-            //    && LoginBiz.login(name, passwrod))
-            if (true)
+            if (LoginBiz.VerifyPara(ref mbox, name, passwrod)
+                && LoginBiz.login(name, passwrod))
             {
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.Close();

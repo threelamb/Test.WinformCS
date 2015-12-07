@@ -77,7 +77,7 @@ namespace Controls.Component
             }
         }
 
-        public void AddAccount(Account p)
+        public void AddAccount(AccountModel p)
         {
             AccountTag accountTag = new AccountTag(this, p);
             ItemList.Add(accountTag);
@@ -101,11 +101,11 @@ namespace Controls.Component
 
         private void tsb_addAccount_Click(object sender, EventArgs e)
         {
-            Account acc = new Account();
+            AccountModel acc = new AccountModel();
             new AccountSetting(this, acc, true).ShowDialog();
         }
 
-        internal void Update(Account account)
+        internal void Update(AccountModel account)
         {
             this.Current.Account = account;
         }
@@ -140,7 +140,7 @@ namespace Controls.Component
         {
             if (this.Current == null)
             {
-                new AccountSetting(this, new Account(), true).Show();
+                new AccountSetting(this, new AccountModel(), true).Show();
             }
             else
             {

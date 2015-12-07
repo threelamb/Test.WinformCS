@@ -38,7 +38,7 @@ namespace LoginAPI.HttpPost
                 }
                 catch (Exception e1)
                 {
-                    throw;
+                    return retString;
                 }
                 string encoding = response.ContentEncoding;
                 if (encoding == null || encoding.Length < 1)
@@ -56,7 +56,7 @@ namespace LoginAPI.HttpPost
             }
             catch (Exception e2)
             {
-                throw;
+                return retString;
             }
         }
     }

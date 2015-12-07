@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Controls.Component
 {
-    public partial class StrategyList : UserControl
+    public partial class OrderChannel : UserControl
     {
-        public StrategyList()
+        public OrderChannel()
         {
             InitializeComponent();
         }

@@ -18,13 +18,13 @@ namespace Controls.Component
             InitializeComponent();
         }
 
-        private Account _Account;
+        private AccountModel _Account;
 
-        public Account Account
+        public AccountModel Account
         {
             get
             {
-                Account res = new Account();
+                AccountModel res = new AccountModel();
                 res.AccountName = this.tbx_AccountName.Text;
                 res.Alias = this.cbb_Alias.SelectedItem.GetString();
                 res.IP = this.tbx_IP.Text;

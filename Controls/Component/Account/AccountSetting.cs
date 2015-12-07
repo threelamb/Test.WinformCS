@@ -14,32 +14,37 @@ namespace Controls.Component
 {
     public partial class AccountSetting : Form
     {
+        AccountBuz Buz = new AccountBuz();
+        List<string> source;
         private AccountList accountList;
-        private Account account;
+        private AccountModel account;
         ChannelList cdCannelList;
         ChannelList tyCannelList;
         bool IsNew;
-        public AccountSetting(AccountList accList, Account acc, bool isNew)
+        public AccountSetting(AccountList accList, AccountModel acc, bool isNew)
         {
             InitializeComponent();
             this.account = acc;
             this.IsNew = isNew;
             this.accountList = accList;
-
-            tyCannelList = new ChannelList(acc.TYChannelList);
+            source = Buz.GetDestinationByAccount(acc.AccountName);
+            tyCannelList = new ChannelList(acc.TYChannelList, false);
             tyCannelList.Dock = DockStyle.Fill;
             this.tabPage1.Controls.Add(tyCannelList);
 
-            cdCannelList = new ChannelList(acc.CDChannelList);
+            cdCannelList = new ChannelList(acc.CDChannelList, true);
             cdCannelList.Dock = DockStyle.Fill;
             this.tabPage2.Controls.Add(cdCannelList);
 
+            this.accountBasicInfo1.SetChannelSource(source);
+            this.tyCannelList.SetChannelSource(source);
+            this.cdCannelList.SetChannelSource(source);
             this.accountBasicInfo1.Account = this.account;
         }
 
         private void btn_RefreshChannel_Click(object sender, EventArgs e)
         {
-            AccountBuz Buz = new AccountBuz();
+            Buz = new AccountBuz();
             List<string> source = Buz.GetDestinationByAccount(this.accountBasicInfo1.tbx_AccountName.Text);
             if (!source.IsNullOrEmpty<string>())
             {
@@ -63,17 +68,17 @@ namespace Controls.Component
             {
                 this.accountList.Update(account);
             }
-            
+
             this.Close();
         }
 
-        private void SaveAccount(Account res)
+        private void SaveAccount(AccountModel res)
         {
             AccountBuz buz = new AccountBuz();
-            buz.Save(res); 
+            buz.Save(res);
         }
 
-        private Account GetAccount()
+        private AccountModel GetAccount()
         {
             account = this.accountBasicInfo1.Account;
             account.CDChannelList = this.cdCannelList.GetChannelList();

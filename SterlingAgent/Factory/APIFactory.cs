@@ -1,4 +1,5 @@
-﻿using APIAgent.Interface;
+﻿using APIAgent.Concrete.Sterling;
+using APIAgent.Interface;
 using Common;
 using System;
 using System.Collections.Generic;
@@ -22,13 +23,15 @@ namespace APIAgent.Factory
 
         public static IOrder CreateOrder()
         {
-            var rs = (IOrder)assembly.CreateInstance(nameSpace + "Order");
+            var rs = new Order();
+            //var rs = (IOrder)assembly.CreateInstance(nameSpace + "Order");
             return rs;
         }
 
         public static IAccount CreateAccount()
         {
-            var rs = (IAccount)assembly.CreateInstance(nameSpace + "Account");
+            var rs = new Account();
+            //var rs = (IAccount)assembly.CreateInstance(nameSpace + "Account");
             return rs;
         }
     }
